@@ -33,8 +33,8 @@ file_001=no
 file_000=no
 file_001=no
 [FILE_INFO]
-file_000=src\main.c
-file_001=gld\linkerscript.gld
+file_000=E:\Documentos\Projetos MPLAB\trunk\src\main.c
+file_001=E:\Documentos\Projetos MPLAB\trunk\gld\linkerscript.gld
 [SUITE_INFO]
 suite_guid={479DDE59-4D56-455E-855E-FFF59A3DB57E}
 suite_state=
