@@ -1,6 +1,6 @@
 /**********************************************************************
 * © 2005 Microchip Technology Inc.
-*
+* teste
 * FileName:        main.c
 * Dependencies:    Header (.h) files if applicable, see below
 * Processor:       dsPIC30Fxxxx
