@@ -39,19 +39,7 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToolBarOperation = new javax.swing.JToolBar();
-        jButtonStart = new javax.swing.JButton();
-        jButtonRestart = new javax.swing.JButton();
         jDesktopPane = new javax.swing.JDesktopPane();
-        jInternalFrameConfig = new javax.swing.JInternalFrame();
-        jLabelStepperSpeed = new javax.swing.JLabel();
-        jSpinnerStepperSpeed = new javax.swing.JSpinner();
-        jLabelWireStep = new javax.swing.JLabel();
-        jSpinnerWireStep = new javax.swing.JSpinner();
-        jLabelStrain = new javax.swing.JLabel();
-        jSpinnerStraining = new javax.swing.JSpinner();
-        jLabelcycles = new javax.swing.JLabel();
-        jSpinnerCycles = new javax.swing.JSpinner();
         jInternalFrameStatus = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaLog = new javax.swing.JTextArea();
@@ -62,12 +50,33 @@ public class MainWindow extends javax.swing.JFrame {
         jTextFieldTime = new javax.swing.JTextField();
         jTextFieldCycles = new javax.swing.JTextField();
         jTextFieldLength = new javax.swing.JTextField();
+        jInternalFrameConfig = new javax.swing.JInternalFrame();
+        jLabelStepperSpeed = new javax.swing.JLabel();
+        jSpinnerStepperSpeed = new javax.swing.JSpinner();
+        jLabelWireStep = new javax.swing.JLabel();
+        jSpinnerWireStep = new javax.swing.JSpinner();
+        jLabelStrain = new javax.swing.JLabel();
+        jSpinnerStraining = new javax.swing.JSpinner();
+        jLabelcycles = new javax.swing.JLabel();
+        jSpinnerCycles = new javax.swing.JSpinner();
+        jPanel1 = new javax.swing.JPanel();
+        jToolBarOperation = new javax.swing.JToolBar();
+        jButtonStart = new javax.swing.JButton();
+        jButtonRestart = new javax.swing.JButton();
+        jToolBarDevice = new javax.swing.JToolBar();
+        jButtonConnect = new javax.swing.JButton();
+        jButtonConfigSerial = new javax.swing.JButton();
+        jButtonDebug = new javax.swing.JButton();
+        jButtonConfigDebug = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemExit = new javax.swing.JMenuItem();
         jMenuView = new javax.swing.JMenu();
         jCheckBoxMenuItemOperation = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemStatus = new javax.swing.JCheckBoxMenuItem();
+        jMenuToolBars = new javax.swing.JMenu();
+        jCheckBoxMenuItemOperationToolBar = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItemDeviceTool = new javax.swing.JCheckBoxMenuItem();
         jMenuOperation = new javax.swing.JMenu();
         jMenuItemStart = new javax.swing.JMenuItem();
         jMenuItemPause = new javax.swing.JMenuItem();
@@ -84,87 +93,6 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Traktana - Centro Brasileiro de Pesquisas Físicas");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        jToolBarOperation.setRollover(true);
-
-        jButtonStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/play.png"))); // NOI18N
-        jButtonStart.setToolTipText("Start/Pause the process.");
-        jButtonStart.setFocusable(false);
-        jButtonStart.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonStart.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButtonStart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonStartActionPerformed(evt);
-            }
-        });
-        jToolBarOperation.add(jButtonStart);
-
-        jButtonRestart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/refresh_32.png"))); // NOI18N
-        jButtonRestart.setToolTipText("Restart the process.");
-        jButtonRestart.setFocusable(false);
-        jButtonRestart.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonRestart.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBarOperation.add(jButtonRestart);
-
-        jInternalFrameConfig.setClosable(true);
-        jInternalFrameConfig.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        jInternalFrameConfig.setIconifiable(true);
-        jInternalFrameConfig.setResizable(true);
-        jInternalFrameConfig.setTitle("Operation");
-        jInternalFrameConfig.setFrameIcon(null);
-        jInternalFrameConfig.setVisible(true);
-
-        jLabelStepperSpeed.setText("Stepper Speed:");
-
-        jLabelWireStep.setText("Wire step:");
-
-        jLabelStrain.setText("Straining:");
-
-        jLabelcycles.setText("Cycles:");
-
-        javax.swing.GroupLayout jInternalFrameConfigLayout = new javax.swing.GroupLayout(jInternalFrameConfig.getContentPane());
-        jInternalFrameConfig.getContentPane().setLayout(jInternalFrameConfigLayout);
-        jInternalFrameConfigLayout.setHorizontalGroup(
-            jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrameConfigLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelWireStep)
-                    .addComponent(jLabelStepperSpeed)
-                    .addComponent(jLabelStrain)
-                    .addComponent(jLabelcycles))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSpinnerStepperSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                    .addComponent(jSpinnerWireStep)
-                    .addComponent(jSpinnerStraining)
-                    .addComponent(jSpinnerCycles))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        jInternalFrameConfigLayout.setVerticalGroup(
-            jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrameConfigLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerStepperSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelStepperSpeed))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelWireStep)
-                    .addComponent(jSpinnerWireStep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerStraining, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelStrain))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerCycles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelcycles))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        jInternalFrameConfig.setBounds(10, 10, 260, 180);
-        jDesktopPane.add(jInternalFrameConfig, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jInternalFrameStatus.setClosable(true);
         jInternalFrameStatus.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -215,12 +143,12 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jTextFieldLength)
                     .addComponent(jTextFieldTime, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                     .addComponent(jTextFieldCycles))
-                .addContainerGap(101, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                .addContainerGap(92, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
             .addGroup(jInternalFrameStatusLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelReport)
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
         jInternalFrameStatusLayout.setVerticalGroup(
             jInternalFrameStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,11 +168,144 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabelReport)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
         );
 
-        jInternalFrameStatus.setBounds(300, 10, 320, 330);
+        jInternalFrameStatus.setBounds(300, 20, 320, 330);
         jDesktopPane.add(jInternalFrameStatus, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jInternalFrameConfig.setClosable(true);
+        jInternalFrameConfig.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jInternalFrameConfig.setIconifiable(true);
+        jInternalFrameConfig.setResizable(true);
+        jInternalFrameConfig.setTitle("Operation");
+        jInternalFrameConfig.setFrameIcon(null);
+        jInternalFrameConfig.setVisible(true);
+
+        jLabelStepperSpeed.setText("Stepper Speed:");
+
+        jLabelWireStep.setText("Wire step:");
+
+        jLabelStrain.setText("Straining:");
+
+        jLabelcycles.setText("Cycles:");
+
+        javax.swing.GroupLayout jInternalFrameConfigLayout = new javax.swing.GroupLayout(jInternalFrameConfig.getContentPane());
+        jInternalFrameConfig.getContentPane().setLayout(jInternalFrameConfigLayout);
+        jInternalFrameConfigLayout.setHorizontalGroup(
+            jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameConfigLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelWireStep)
+                    .addComponent(jLabelStepperSpeed)
+                    .addComponent(jLabelStrain)
+                    .addComponent(jLabelcycles))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSpinnerStepperSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(jSpinnerWireStep)
+                    .addComponent(jSpinnerStraining)
+                    .addComponent(jSpinnerCycles))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        jInternalFrameConfigLayout.setVerticalGroup(
+            jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameConfigLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinnerStepperSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelStepperSpeed))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelWireStep)
+                    .addComponent(jSpinnerWireStep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinnerStraining, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelStrain))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinnerCycles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelcycles))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        jInternalFrameConfig.setBounds(30, 20, 260, 204);
+        jDesktopPane.add(jInternalFrameConfig, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jButtonStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/play.png"))); // NOI18N
+        jButtonStart.setToolTipText("Start/Pause the process.");
+        jButtonStart.setFocusable(false);
+        jButtonStart.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonStart.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStartActionPerformed(evt);
+            }
+        });
+        jToolBarOperation.add(jButtonStart);
+
+        jButtonRestart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/refresh_32.png"))); // NOI18N
+        jButtonRestart.setToolTipText("Restart the process.");
+        jButtonRestart.setFocusable(false);
+        jButtonRestart.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonRestart.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBarOperation.add(jButtonRestart);
+
+        jToolBarDevice.setRollover(true);
+
+        jButtonConnect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/connect.png"))); // NOI18N
+        jButtonConnect.setToolTipText("Connect device");
+        jButtonConnect.setFocusable(false);
+        jButtonConnect.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonConnect.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonConnect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConnectActionPerformed(evt);
+            }
+        });
+        jToolBarDevice.add(jButtonConnect);
+
+        jButtonConfigSerial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/cog.png"))); // NOI18N
+        jButtonConfigSerial.setToolTipText("Serial device configuration");
+        jButtonConfigSerial.setFocusable(false);
+        jButtonConfigSerial.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonConfigSerial.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBarDevice.add(jButtonConfigSerial);
+
+        jButtonDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug_add.png"))); // NOI18N
+        jButtonDebug.setToolTipText("Connect serial debug");
+        jButtonDebug.setFocusable(false);
+        jButtonDebug.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonDebug.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBarDevice.add(jButtonDebug);
+
+        jButtonConfigDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug_edit.png"))); // NOI18N
+        jButtonConfigDebug.setToolTipText("Serial debug configuration");
+        jButtonConfigDebug.setFocusable(false);
+        jButtonConfigDebug.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonConfigDebug.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBarDevice.add(jButtonConfigDebug);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToolBarDevice, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(459, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToolBarDevice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         jMenuFile.setText("File");
 
@@ -278,6 +339,18 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         jMenuView.add(jCheckBoxMenuItemStatus);
+
+        jMenuToolBars.setText("ToolBars");
+
+        jCheckBoxMenuItemOperationToolBar.setSelected(true);
+        jCheckBoxMenuItemOperationToolBar.setText("Operation");
+        jMenuToolBars.add(jCheckBoxMenuItemOperationToolBar);
+
+        jCheckBoxMenuItemDeviceTool.setSelected(true);
+        jCheckBoxMenuItemDeviceTool.setText("Device/Configuration");
+        jMenuToolBars.add(jCheckBoxMenuItemDeviceTool);
+
+        jMenuView.add(jMenuToolBars);
 
         jMenuBar1.add(jMenuView);
 
@@ -338,16 +411,16 @@ public class MainWindow extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(509, Short.MAX_VALUE))
-            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE))
+                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE))
         );
 
         pack();
@@ -397,6 +470,10 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCheckBoxMenuItemStatusActionPerformed
 
+    private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonConnectActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -421,9 +498,15 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonConfigDebug;
+    private javax.swing.JButton jButtonConfigSerial;
+    private javax.swing.JButton jButtonConnect;
+    private javax.swing.JButton jButtonDebug;
     private javax.swing.JButton jButtonRestart;
     private javax.swing.JButton jButtonStart;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDeviceTool;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemOperation;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemOperationToolBar;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemStatus;
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JInternalFrame jInternalFrameConfig;
@@ -451,7 +534,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemSerialConfiguration1;
     private javax.swing.JMenuItem jMenuItemStart;
     private javax.swing.JMenu jMenuOperation;
+    private javax.swing.JMenu jMenuToolBars;
     private javax.swing.JMenu jMenuView;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerCycles;
     private javax.swing.JSpinner jSpinnerStepperSpeed;
@@ -461,6 +546,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldCycles;
     private javax.swing.JTextField jTextFieldLength;
     private javax.swing.JTextField jTextFieldTime;
+    private javax.swing.JToolBar jToolBarDevice;
     private javax.swing.JToolBar jToolBarOperation;
     // End of variables declaration//GEN-END:variables
     private Main program;
