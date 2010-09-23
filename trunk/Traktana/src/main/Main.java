@@ -20,9 +20,8 @@ public class Main {
     public Main(){
         Config = new ParametersConfig();
         // Serial Configuration: default init
-        Config.getSerialconfig0().setPortName("/dev/ttyUSB0");
-        Config.getSerialconfig1().setPortName("/dev/ttyUSB1");
-        
+        Config.getSerialConfigDevice().setPortName("/dev/ttyUSB0");
+        Config.getSerialConfigDebug().setPortName("/dev/ttyUSB1");
     }
 
     public void setConfig(ParametersConfig Config) {
@@ -33,11 +32,11 @@ public class Main {
         return Config;
     }
 
-    public void connectSerialPort0(){
-
+    public void connectSerialPortDevice(){
+        
     }
-    public void connectSerialPort1(){
-
+    public void connectSerialPortDebug(){
+        
     }
     /**
      * @param args the command line arguments

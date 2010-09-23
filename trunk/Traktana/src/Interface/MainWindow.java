@@ -59,7 +59,7 @@ public class MainWindow extends javax.swing.JFrame {
         jSpinnerStraining = new javax.swing.JSpinner();
         jLabelcycles = new javax.swing.JLabel();
         jSpinnerCycles = new javax.swing.JSpinner();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelToolBar = new javax.swing.JPanel();
         jToolBarOperation = new javax.swing.JToolBar();
         jButtonStart = new javax.swing.JButton();
         jButtonRestart = new javax.swing.JButton();
@@ -68,7 +68,7 @@ public class MainWindow extends javax.swing.JFrame {
         jButtonConfigSerial = new javax.swing.JButton();
         jButtonDebug = new javax.swing.JButton();
         jButtonConfigDebug = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenuBar = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemExit = new javax.swing.JMenuItem();
         jMenuView = new javax.swing.JMenu();
@@ -86,8 +86,8 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItemConnectDebug = new javax.swing.JMenuItem();
         jMenuConfiguration = new javax.swing.JMenu();
         jMenuItemOptions = new javax.swing.JMenuItem();
-        jMenuItemSerialConfiguration0 = new javax.swing.JMenuItem();
-        jMenuItemSerialConfiguration1 = new javax.swing.JMenuItem();
+        jMenuItemSerialDeviceConfiguration = new javax.swing.JMenuItem();
+        jMenuItemSerialDebugConfiguration = new javax.swing.JMenuItem();
         jMenuHelp = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -101,6 +101,23 @@ public class MainWindow extends javax.swing.JFrame {
         jInternalFrameStatus.setTitle("Status");
         jInternalFrameStatus.setFrameIcon(null);
         jInternalFrameStatus.setVisible(true);
+        jInternalFrameStatus.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                jInternalFrameStatusInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jTextAreaLog.setColumns(20);
         jTextAreaLog.setRows(5);
@@ -168,10 +185,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabelReport)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
         );
 
-        jInternalFrameStatus.setBounds(300, 20, 320, 330);
+        jInternalFrameStatus.setBounds(0, 0, 320, 400);
         jDesktopPane.add(jInternalFrameStatus, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jInternalFrameConfig.setClosable(true);
@@ -181,6 +198,23 @@ public class MainWindow extends javax.swing.JFrame {
         jInternalFrameConfig.setTitle("Operation");
         jInternalFrameConfig.setFrameIcon(null);
         jInternalFrameConfig.setVisible(true);
+        jInternalFrameConfig.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                jInternalFrameConfigInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jLabelStepperSpeed.setText("Stepper Speed:");
 
@@ -207,7 +241,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jSpinnerWireStep)
                     .addComponent(jSpinnerStraining)
                     .addComponent(jSpinnerCycles))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jInternalFrameConfigLayout.setVerticalGroup(
             jInternalFrameConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,8 +265,12 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jInternalFrameConfig.setBounds(30, 20, 260, 204);
+        jInternalFrameConfig.setBounds(350, 30, 240, 204);
         jDesktopPane.add(jInternalFrameConfig, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelToolBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jToolBarOperation.setFloatable(false);
 
         jButtonStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/play.png"))); // NOI18N
         jButtonStart.setToolTipText("Start/Pause the process.");
@@ -253,6 +291,7 @@ public class MainWindow extends javax.swing.JFrame {
         jButtonRestart.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBarOperation.add(jButtonRestart);
 
+        jToolBarDevice.setFloatable(false);
         jToolBarDevice.setRollover(true);
 
         jButtonConnect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/connect.png"))); // NOI18N
@@ -272,6 +311,11 @@ public class MainWindow extends javax.swing.JFrame {
         jButtonConfigSerial.setFocusable(false);
         jButtonConfigSerial.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonConfigSerial.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonConfigSerial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSerialDeviceConfigurationActionPerformed(evt);
+            }
+        });
         jToolBarDevice.add(jButtonConfigSerial);
 
         jButtonDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug_add.png"))); // NOI18N
@@ -286,25 +330,27 @@ public class MainWindow extends javax.swing.JFrame {
         jButtonConfigDebug.setFocusable(false);
         jButtonConfigDebug.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonConfigDebug.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonConfigDebug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSerialDebugConfigurationActionPerformed(evt);
+            }
+        });
         jToolBarDevice.add(jButtonConfigDebug);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelToolBarLayout = new javax.swing.GroupLayout(jPanelToolBar);
+        jPanelToolBar.setLayout(jPanelToolBarLayout);
+        jPanelToolBarLayout.setHorizontalGroup(
+            jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolBarLayout.createSequentialGroup()
                 .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToolBarDevice, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
+                .addComponent(jToolBarDevice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(550, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToolBarDevice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToolBarOperation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        jPanelToolBarLayout.setVerticalGroup(
+            jPanelToolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jToolBarOperation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToolBarDevice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jMenuFile.setText("File");
@@ -318,7 +364,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jMenuFile.add(jMenuItemExit);
 
-        jMenuBar1.add(jMenuFile);
+        jMenuBar.add(jMenuFile);
 
         jMenuView.setText("View");
 
@@ -344,15 +390,25 @@ public class MainWindow extends javax.swing.JFrame {
 
         jCheckBoxMenuItemOperationToolBar.setSelected(true);
         jCheckBoxMenuItemOperationToolBar.setText("Operation");
+        jCheckBoxMenuItemOperationToolBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemOperationToolBarActionPerformed(evt);
+            }
+        });
         jMenuToolBars.add(jCheckBoxMenuItemOperationToolBar);
 
         jCheckBoxMenuItemDeviceTool.setSelected(true);
         jCheckBoxMenuItemDeviceTool.setText("Device/Configuration");
+        jCheckBoxMenuItemDeviceTool.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemDeviceToolActionPerformed(evt);
+            }
+        });
         jMenuToolBars.add(jCheckBoxMenuItemDeviceTool);
 
         jMenuView.add(jMenuToolBars);
 
-        jMenuBar1.add(jMenuView);
+        jMenuBar.add(jMenuView);
 
         jMenuOperation.setText("Operation");
 
@@ -366,7 +422,7 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItemRestart.setText("Restart");
         jMenuOperation.add(jMenuItemRestart);
 
-        jMenuBar1.add(jMenuOperation);
+        jMenuBar.add(jMenuOperation);
 
         jMenuDevice.setText("Device");
 
@@ -376,51 +432,49 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuItemConnectDebug.setText("Connect Debug");
         jMenuDevice.add(jMenuItemConnectDebug);
 
-        jMenuBar1.add(jMenuDevice);
+        jMenuBar.add(jMenuDevice);
 
         jMenuConfiguration.setText("Configuration");
 
         jMenuItemOptions.setText("Options");
         jMenuConfiguration.add(jMenuItemOptions);
 
-        jMenuItemSerialConfiguration0.setText("Serial Configuration 0");
-        jMenuItemSerialConfiguration0.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemSerialDeviceConfiguration.setText("Serial Device");
+        jMenuItemSerialDeviceConfiguration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSerialConfiguration0ActionPerformed(evt);
+                jMenuItemSerialDeviceConfigurationActionPerformed(evt);
             }
         });
-        jMenuConfiguration.add(jMenuItemSerialConfiguration0);
+        jMenuConfiguration.add(jMenuItemSerialDeviceConfiguration);
 
-        jMenuItemSerialConfiguration1.setText("Serial Configuration 1");
-        jMenuItemSerialConfiguration1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemSerialDebugConfiguration.setText("Serial Debug");
+        jMenuItemSerialDebugConfiguration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSerialConfiguration1ActionPerformed(evt);
+                jMenuItemSerialDebugConfigurationActionPerformed(evt);
             }
         });
-        jMenuConfiguration.add(jMenuItemSerialConfiguration1);
+        jMenuConfiguration.add(jMenuItemSerialDebugConfiguration);
 
-        jMenuBar1.add(jMenuConfiguration);
+        jMenuBar.add(jMenuConfiguration);
 
         jMenuHelp.setText("Help");
-        jMenuBar1.add(jMenuHelp);
+        jMenuBar.add(jMenuHelp);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
+            .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE))
+                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE))
         );
 
         pack();
@@ -431,21 +485,21 @@ public class MainWindow extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItemExitActionPerformed
 
-    private void jMenuItemSerialConfiguration0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSerialConfiguration0ActionPerformed
+    private void jMenuItemSerialDeviceConfigurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSerialDeviceConfigurationActionPerformed
         // TODO add your handling code here:
         ConfigSerialDialog cfgframe0 = new ConfigSerialDialog(this, true);
-        cfgframe0.setTitle("Serial Configuration 0");
-        cfgframe0.setConfig(programConfig.getSerialconfig0());
+        cfgframe0.setTitle("Serial Device");
+        cfgframe0.setConfig(programConfig.getSerialConfigDevice());
         cfgframe0.setVisible(true);
-    }//GEN-LAST:event_jMenuItemSerialConfiguration0ActionPerformed
+    }//GEN-LAST:event_jMenuItemSerialDeviceConfigurationActionPerformed
 
-    private void jMenuItemSerialConfiguration1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSerialConfiguration1ActionPerformed
+    private void jMenuItemSerialDebugConfigurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSerialDebugConfigurationActionPerformed
         // TODO add your handling code here:
         ConfigSerialDialog cfgframe1 = new ConfigSerialDialog(this, true);
-        cfgframe1.setTitle("Serial Configuration 1");
-        cfgframe1.setConfig(programConfig.getSerialconfig1());
+        cfgframe1.setTitle("Serial Debug");
+        cfgframe1.setConfig(programConfig.getSerialConfigDebug());
         cfgframe1.setVisible(true);
-    }//GEN-LAST:event_jMenuItemSerialConfiguration1ActionPerformed
+    }//GEN-LAST:event_jMenuItemSerialDebugConfigurationActionPerformed
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
@@ -473,6 +527,34 @@ public class MainWindow extends javax.swing.JFrame {
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonConnectActionPerformed
+
+    private void jCheckBoxMenuItemOperationToolBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemOperationToolBarActionPerformed
+        // TODO add your handling code here:
+        if(jCheckBoxMenuItemOperationToolBar.getState()){
+            jToolBarOperation.setVisible(true);
+        }else{
+            jToolBarOperation.setVisible(false);
+        }
+    }//GEN-LAST:event_jCheckBoxMenuItemOperationToolBarActionPerformed
+
+    private void jCheckBoxMenuItemDeviceToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemDeviceToolActionPerformed
+        // TODO add your handling code here:
+        if(jCheckBoxMenuItemDeviceTool.getState()){
+            jToolBarDevice.setVisible(true);
+        }else{
+            jToolBarDevice.setVisible(false);
+        }
+    }//GEN-LAST:event_jCheckBoxMenuItemDeviceToolActionPerformed
+
+    private void jInternalFrameConfigInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameConfigInternalFrameClosing
+        // TODO add your handling code here:
+        jCheckBoxMenuItemOperation.setSelected(false);
+    }//GEN-LAST:event_jInternalFrameConfigInternalFrameClosing
+
+    private void jInternalFrameStatusInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameStatusInternalFrameClosing
+        // TODO add your handling code here:
+        jCheckBoxMenuItemStatus.setSelected(false);
+    }//GEN-LAST:event_jInternalFrameStatusInternalFrameClosing
 
     /**
     * @param args the command line arguments
@@ -519,7 +601,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTime;
     private javax.swing.JLabel jLabelWireStep;
     private javax.swing.JLabel jLabelcycles;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuConfiguration;
     private javax.swing.JMenu jMenuDevice;
     private javax.swing.JMenu jMenuFile;
@@ -530,13 +612,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemOptions;
     private javax.swing.JMenuItem jMenuItemPause;
     private javax.swing.JMenuItem jMenuItemRestart;
-    private javax.swing.JMenuItem jMenuItemSerialConfiguration0;
-    private javax.swing.JMenuItem jMenuItemSerialConfiguration1;
+    private javax.swing.JMenuItem jMenuItemSerialDebugConfiguration;
+    private javax.swing.JMenuItem jMenuItemSerialDeviceConfiguration;
     private javax.swing.JMenuItem jMenuItemStart;
     private javax.swing.JMenu jMenuOperation;
     private javax.swing.JMenu jMenuToolBars;
     private javax.swing.JMenu jMenuView;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelToolBar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerCycles;
     private javax.swing.JSpinner jSpinnerStepperSpeed;
