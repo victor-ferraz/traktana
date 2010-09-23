@@ -12,26 +12,26 @@ package main;
 public class ParametersConfig {
 
     public ParametersConfig() {
-        serialconfig0 = new ParametersSerial();
-        serialconfig1 = new ParametersSerial();
+        serialConfigDevice = new ParametersSerial();
+        serialConfigDebug = new ParametersSerial();
     }
 
-    public void setSerialconfig0(ParametersSerial serialconfig0) {
-        this.serialconfig0 = serialconfig0;
+    public ParametersSerial getSerialConfigDebug() {
+        return serialConfigDebug;
     }
 
-    public void setSerialconfig1(ParametersSerial serialconfig1) {
-        this.serialconfig1 = serialconfig1;
+    public ParametersSerial getSerialConfigDevice() {
+        return serialConfigDevice;
     }
 
-    public ParametersSerial getSerialconfig0() {
-        return serialconfig0;
+    public void setSerialConfigDebug(ParametersSerial serialConfigDebug) {
+        this.serialConfigDebug = serialConfigDebug;
     }
 
-    public ParametersSerial getSerialconfig1() {
-        return serialconfig1;
+    public void setSerialConfigDevice(ParametersSerial serialConfigDevice) {
+        this.serialConfigDevice = serialConfigDevice;
     }
 
-    private ParametersSerial serialconfig0;
-    private ParametersSerial serialconfig1;
+    private ParametersSerial serialConfigDevice;
+    private ParametersSerial serialConfigDebug;
 }

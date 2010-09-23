@@ -7,6 +7,7 @@ package io;
 
 import gnu.io.CommPortIdentifier;
 import java.util.ArrayList;
+import main.ParametersSerial;
 
 /**
  *
@@ -43,6 +44,10 @@ public class SerialInterface {
                ports[i] = (String) portlist.get(i);
         }
         return ports;
+    }
+
+    public void connect (ParametersSerial serialConfig){
+        
     }
 
 }
