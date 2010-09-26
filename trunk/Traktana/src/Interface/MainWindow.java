@@ -11,7 +11,7 @@
 
 package Interface;
 
-import javax.swing.UIManager;
+import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import main.Main;
@@ -503,7 +503,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
-        
+        program.readConfiguration();
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jCheckBoxMenuItemOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemOperationActionPerformed
@@ -526,6 +526,16 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         // TODO add your handling code here:
+        if (program.getDeviceConnected()) {
+            program.disconnectDevice();
+            jButtonConnect.setIcon(new ImageIcon(getClass().getResource("/Interface/icons/connect.png")));
+            jButtonConnect.setToolTipText("Connect device");
+        } else {
+            if (program.connectDevice()) {
+                jButtonConnect.setIcon(new ImageIcon(getClass().getResource("/Interface/icons/disconnect.png")));
+                jButtonConnect.setToolTipText("Disconnect device");
+            }
+        }
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
     private void jCheckBoxMenuItemOperationToolBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemOperationToolBarActionPerformed
@@ -633,5 +643,5 @@ public class MainWindow extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private Main program;
     private ParametersConfig programConfig;
-    private ParametersSerial SerialConfig;
+    
 }
