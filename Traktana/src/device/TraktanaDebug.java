@@ -36,6 +36,12 @@ public class TraktanaDebug {
         debugConnected = false;
         serialDebug.disconnect();
     }
+    public void sendCommand(String str){
+        serialDevice.sendCommand(str);
+    }
+    public String receiveResponse(){
+        return serialDevice.receiveResponse();
+    }
     public void setSerialParametersDevice(ParametersSerial paramDevice){
         serialDevice.setParamConfig(paramDevice);
     }
@@ -52,7 +58,7 @@ public class TraktanaDebug {
 
     }
     public void readConfiguration(){
-        serialDevice.receiveResponse();
+        
     }
     public void writeConfiguration(){
 

@@ -23,15 +23,16 @@ public class ReadSerial implements SerialPortEventListener {
     }
 
     public boolean isDataAvailable() {
-        return dataAvailable;
+        return this.dataAvailable;
     }
 
     public String getDataReadBuffer() {
+       this.dataAvailable = false;
         return dataReadBuffer;
     }
 
 
-    public void execute(SerialPort serialPort) {
+    public void run(SerialPort serialPort) {
         try {
             this.serialPort = serialPort;
             //Pega o InputStream da Porta Serial
@@ -53,7 +54,7 @@ public class ReadSerial implements SerialPortEventListener {
         StringBuffer readBuffer = new StringBuffer();
         int numBytes = 0;
         dataAvailable = false;
-
+        
         switch (event.getEventType()) {
             case SerialPortEvent.BI:
             case SerialPortEvent.OE:
@@ -72,13 +73,15 @@ public class ReadSerial implements SerialPortEventListener {
                     try {
                         numBytes = inputStream.read();
                         if (numBytes == -1) {
-                            System.out.println("numBytes = -1");break;
+                            System.out.println("numBytes = -1");
+                            break;
                         }else {
-                            //System.out.println("numBytes = char");
+                            //System.out.println("numBytes = " + (char)numBytes);
                             readBuffer.append((char) numBytes);
                         }
                     } catch (IOException ioe) {
-                        System.out.println("Erro de leitura serial:"  + ioe);
+                        System.out.println("Serial read error:"  + ioe);
+                        dataAvailable = false;
                     }
                 }
                 dataReadBuffer = new String(readBuffer);
