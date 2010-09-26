@@ -22,6 +22,7 @@ public class SerialInterface {
         this.paramConfig = paramConfig;
         serialConnected = false;
         portRead = new ReadSerial();
+        portWrite = new WriteSerial();
     }
 
     public void setParamConfig(ParametersSerial paramConfig) {
@@ -35,17 +36,18 @@ public class SerialInterface {
         return paramConfig;
     }
 
-    public boolean sendCommand() {
-        boolean response = false;
-
-
-        return response;
+    public boolean sendCommand(String cmd) {
+        return portWrite.sendString(cmd);
     }
 
-    public void receiveResponse() {
+    public String receiveResponse() { // implementar timeout
         if(serialConnected){
-            while(!portRead.isDataAvailable());
-            System.out.println(portRead.getDataReadBuffer());
+            System.out.println("dataAvailable = " + portRead.isDataAvailable());
+            while(!portRead.isDataAvailable()); //espera eternamente se não vier: pode travar o programa
+            //System.out.println(portRead.getDataReadBuffer());
+            return portRead.getDataReadBuffer();
+        }else{
+            return null;
         }
     }
 
@@ -65,8 +67,8 @@ public class SerialInterface {
                         paramConfig.getDataBits(),
                         paramConfig.getStopBits(),
                         paramConfig.getParity());
-                portRead.execute(serialPort);
-                //portWrite também vai aqui
+                portRead.run(serialPort);
+                portWrite.run(serialPort);
                 serialConnected = true;
 
             } catch (PortInUseException e) {
@@ -148,4 +150,5 @@ public class SerialInterface {
     private boolean serialConnected;
     SerialPort serialPort;
     private ReadSerial portRead;
+    private WriteSerial portWrite;
 }

@@ -503,7 +503,9 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
-        program.readConfiguration();
+        program.sendCommand("Me manda alguma coisa!");
+        //jTextAreaLog.setText("");
+        jTextAreaLog.append(program.receiveResponse()+"\n");
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jCheckBoxMenuItemOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemOperationActionPerformed

@@ -54,6 +54,12 @@ public class Main {
     public void readConfiguration() {
         traktana.readConfiguration();
     }
+    public String receiveResponse(){
+        return traktana.receiveResponse();
+    }
+    public void sendCommand(String cmd){
+        traktana.sendCommand(cmd);
+    }
 
     /**
      * @param args the command line arguments
