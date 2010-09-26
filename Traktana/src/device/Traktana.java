@@ -5,13 +5,16 @@
 
 package device;
 
+import main.ParametersSerial;
+
 /**
  *
  * @author victor
  */
-public class Traktana {
+public class Traktana extends TraktanaDebug {
 
-    public Traktana() {
+    public Traktana(ParametersSerial paramDevice, ParametersSerial paramDebug) {
+        super(paramDevice,paramDebug);
     }
     
 }
