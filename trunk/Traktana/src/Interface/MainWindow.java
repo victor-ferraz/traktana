@@ -318,14 +318,19 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jToolBarDevice.add(jButtonConfigSerial);
 
-        jButtonDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug_add.png"))); // NOI18N
+        jButtonDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/connectbug.png"))); // NOI18N
         jButtonDebug.setToolTipText("Connect serial debug");
         jButtonDebug.setFocusable(false);
         jButtonDebug.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonDebug.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonDebug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDebugActionPerformed(evt);
+            }
+        });
         jToolBarDevice.add(jButtonDebug);
 
-        jButtonConfigDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug_edit.png"))); // NOI18N
+        jButtonConfigDebug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/cogbug.png"))); // NOI18N
         jButtonConfigDebug.setToolTipText("Serial debug configuration");
         jButtonConfigDebug.setFocusable(false);
         jButtonConfigDebug.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -567,6 +572,20 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         jCheckBoxMenuItemStatus.setSelected(false);
     }//GEN-LAST:event_jInternalFrameStatusInternalFrameClosing
+
+    private void jButtonDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDebugActionPerformed
+        // TODO add your handling code here:
+        if (program.getDebugConnected()) {
+            program.disconnectDebug();
+            jButtonConnect.setIcon(new ImageIcon(getClass().getResource("/Interface/icons/connect.png")));
+            jButtonConnect.setToolTipText("Connect device");
+        } else {
+            if (program.connectDevice()) {
+                jButtonConnect.setIcon(new ImageIcon(getClass().getResource("/Interface/icons/disconnect.png")));
+                jButtonConnect.setToolTipText("Disconnect device");
+            }
+        }
+    }//GEN-LAST:event_jButtonDebugActionPerformed
 
     /**
     * @param args the command line arguments
