@@ -59,6 +59,14 @@ public class MainWindow extends javax.swing.JFrame {
         jSpinnerStraining = new javax.swing.JSpinner();
         jLabelcycles = new javax.swing.JLabel();
         jSpinnerCycles = new javax.swing.JSpinner();
+        jInternalFrameDebug = new javax.swing.JInternalFrame();
+        jButtonSend = new javax.swing.JButton();
+        jTextFieldCommand = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaDebug = new javax.swing.JTextArea();
+        jLabelTimeout = new javax.swing.JLabel();
+        jSpinnerTimeout = new javax.swing.JSpinner();
+        jLabelCommand = new javax.swing.JLabel();
         jPanelToolBar = new javax.swing.JPanel();
         jToolBarOperation = new javax.swing.JToolBar();
         jButtonStart = new javax.swing.JButton();
@@ -74,6 +82,7 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuView = new javax.swing.JMenu();
         jCheckBoxMenuItemOperation = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemStatus = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItemDebug = new javax.swing.JCheckBoxMenuItem();
         jMenuToolBars = new javax.swing.JMenu();
         jCheckBoxMenuItemOperationToolBar = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemDeviceTool = new javax.swing.JCheckBoxMenuItem();
@@ -94,12 +103,17 @@ public class MainWindow extends javax.swing.JFrame {
         setTitle("Traktana - Centro Brasileiro de Pesquisas Físicas");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jDesktopPane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jDesktopPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jDesktopPane.setDoubleBuffered(true);
+        jDesktopPane.setSelectedFrame(jInternalFrameStatus);
+
         jInternalFrameStatus.setClosable(true);
         jInternalFrameStatus.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         jInternalFrameStatus.setIconifiable(true);
         jInternalFrameStatus.setResizable(true);
         jInternalFrameStatus.setTitle("Status");
-        jInternalFrameStatus.setFrameIcon(null);
+        jInternalFrameStatus.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/chart_curve.png"))); // NOI18N
         jInternalFrameStatus.setVisible(true);
         jInternalFrameStatus.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -196,7 +210,7 @@ public class MainWindow extends javax.swing.JFrame {
         jInternalFrameConfig.setIconifiable(true);
         jInternalFrameConfig.setResizable(true);
         jInternalFrameConfig.setTitle("Operation");
-        jInternalFrameConfig.setFrameIcon(null);
+        jInternalFrameConfig.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/database_gear.png"))); // NOI18N
         jInternalFrameConfig.setVisible(true);
         jInternalFrameConfig.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -265,8 +279,87 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jInternalFrameConfig.setBounds(350, 30, 240, 204);
+        jInternalFrameConfig.setBounds(330, 0, 240, 204);
         jDesktopPane.add(jInternalFrameConfig, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jInternalFrameDebug.setClosable(true);
+        jInternalFrameDebug.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jInternalFrameDebug.setIconifiable(true);
+        jInternalFrameDebug.setTitle("Debug");
+        jInternalFrameDebug.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/icons/bug.png"))); // NOI18N
+        jInternalFrameDebug.setVisible(true);
+        jInternalFrameDebug.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                jInternalFrameDebugInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
+        jButtonSend.setText("Send");
+
+        jTextAreaDebug.setColumns(20);
+        jTextAreaDebug.setLineWrap(true);
+        jTextAreaDebug.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaDebug);
+
+        jLabelTimeout.setText("Timeout (s):");
+
+        jSpinnerTimeout.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(0.0f), Float.valueOf(20.0f), Float.valueOf(1.0f)));
+
+        jLabelCommand.setText("Command:");
+
+        javax.swing.GroupLayout jInternalFrameDebugLayout = new javax.swing.GroupLayout(jInternalFrameDebug.getContentPane());
+        jInternalFrameDebug.getContentPane().setLayout(jInternalFrameDebugLayout);
+        jInternalFrameDebugLayout.setHorizontalGroup(
+            jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrameDebugLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jInternalFrameDebugLayout.createSequentialGroup()
+                        .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelCommand)
+                            .addComponent(jLabelTimeout))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrameDebugLayout.createSequentialGroup()
+                                .addComponent(jSpinnerTimeout, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSend))
+                            .addComponent(jTextFieldCommand, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        jInternalFrameDebugLayout.setVerticalGroup(
+            jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameDebugLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldCommand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelCommand))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonSend, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+                    .addGroup(jInternalFrameDebugLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jSpinnerTimeout)
+                        .addComponent(jLabelTimeout)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
+        );
+
+        jInternalFrameDebug.setBounds(580, 0, 240, 340);
+        jDesktopPane.add(jInternalFrameDebug, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelToolBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -391,6 +484,15 @@ public class MainWindow extends javax.swing.JFrame {
         });
         jMenuView.add(jCheckBoxMenuItemStatus);
 
+        jCheckBoxMenuItemDebug.setSelected(true);
+        jCheckBoxMenuItemDebug.setText("Debug");
+        jCheckBoxMenuItemDebug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemDebugActionPerformed(evt);
+            }
+        });
+        jMenuView.add(jCheckBoxMenuItemDebug);
+
         jMenuToolBars.setText("ToolBars");
 
         jCheckBoxMenuItemOperationToolBar.setSelected(true);
@@ -471,15 +573,15 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
             .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jDesktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -587,6 +689,20 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonDebugActionPerformed
 
+    private void jCheckBoxMenuItemDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemDebugActionPerformed
+        // TODO add your handling code here:
+        if(jCheckBoxMenuItemDebug.getState()){
+            jInternalFrameDebug.setVisible(true);
+        }else{
+            jInternalFrameDebug.setVisible(false);
+        }
+    }//GEN-LAST:event_jCheckBoxMenuItemDebugActionPerformed
+
+    private void jInternalFrameDebugInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameDebugInternalFrameClosing
+        // TODO add your handling code here:
+        jCheckBoxMenuItemDebug.setSelected(false);
+    }//GEN-LAST:event_jInternalFrameDebugInternalFrameClosing
+
     /**
     * @param args the command line arguments
     */
@@ -616,20 +732,25 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButtonConnect;
     private javax.swing.JButton jButtonDebug;
     private javax.swing.JButton jButtonRestart;
+    private javax.swing.JButton jButtonSend;
     private javax.swing.JButton jButtonStart;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDebug;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDeviceTool;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemOperation;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemOperationToolBar;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemStatus;
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JInternalFrame jInternalFrameConfig;
+    private javax.swing.JInternalFrame jInternalFrameDebug;
     private javax.swing.JInternalFrame jInternalFrameStatus;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelCommand;
     private javax.swing.JLabel jLabelCyclesStatus;
     private javax.swing.JLabel jLabelReport;
     private javax.swing.JLabel jLabelStepperSpeed;
     private javax.swing.JLabel jLabelStrain;
     private javax.swing.JLabel jLabelTime;
+    private javax.swing.JLabel jLabelTimeout;
     private javax.swing.JLabel jLabelWireStep;
     private javax.swing.JLabel jLabelcycles;
     private javax.swing.JMenuBar jMenuBar;
@@ -651,11 +772,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuView;
     private javax.swing.JPanel jPanelToolBar;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinnerCycles;
     private javax.swing.JSpinner jSpinnerStepperSpeed;
     private javax.swing.JSpinner jSpinnerStraining;
+    private javax.swing.JSpinner jSpinnerTimeout;
     private javax.swing.JSpinner jSpinnerWireStep;
+    private javax.swing.JTextArea jTextAreaDebug;
     private javax.swing.JTextArea jTextAreaLog;
+    private javax.swing.JTextField jTextFieldCommand;
     private javax.swing.JTextField jTextFieldCycles;
     private javax.swing.JTextField jTextFieldLength;
     private javax.swing.JTextField jTextFieldTime;
