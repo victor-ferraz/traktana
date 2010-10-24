@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="69">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Arquivos de cabeçalho"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="f3"
+                     displayName="device"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="Interface"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>MainWindow.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="io"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Arquivos de código-fonte"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="f3"
+                     displayName="device"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="Interface"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>MainWindow.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="io"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Arquivos de recurso"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="f3"
+                     displayName="device"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="icons"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="Interface"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>MainWindow.ui</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="io"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Arquivos de testes"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="4">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <qt>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+      </compileType>
+    </conf>
+    <conf name="Release" type="4">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <qt>
+        <buildMode>1</buildMode>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
