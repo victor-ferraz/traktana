@@ -9,17 +9,27 @@
                      displayName="device"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>Traktana.h</itemPath>
+        <itemPath>TraktanaDebug.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
                      displayName="Interface"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>MainWindow.h</itemPath>
+        <itemPath>SerialConfigWindow.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="io"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>SerialInterface.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="main"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>Program.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
@@ -30,17 +40,29 @@
                      displayName="device"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>Traktana.cpp</itemPath>
+        <itemPath>TraktanaDebug.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
                      displayName="Interface"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>MainWindow.cpp</itemPath>
+        <itemPath>MainWindow.ui</itemPath>
+        <itemPath>SerialConfigWindow.cpp</itemPath>
+        <itemPath>SerialConfigWindow.ui</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="io"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>SerialInterface.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="main"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>Program.cpp</itemPath>
       </logicalFolder>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -48,27 +70,6 @@
                    displayName="Arquivos de recurso"
                    projectFiles="true"
                    kind="SOURCE_LOGICAL_FOLDER">
-      <logicalFolder name="f3"
-                     displayName="device"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-      </logicalFolder>
-      <logicalFolder name="f4"
-                     displayName="icons"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-      </logicalFolder>
-      <logicalFolder name="f1"
-                     displayName="Interface"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-        <itemPath>MainWindow.ui</itemPath>
-      </logicalFolder>
-      <logicalFolder name="f2"
-                     displayName="io"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Arquivos de testes"
