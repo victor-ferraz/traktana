@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Traktana - Centro Brasileiro de Pesquisas Físicas</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/layers.png</normaloff>icons/layers.png</iconset>
+  </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
@@ -58,7 +62,7 @@
       </size>
      </property>
      <property name="windowTitle">
-      <string>Status</string>
+      <string/>
      </property>
      <property name="accessibleName">
       <string/>
@@ -268,7 +272,7 @@
      <x>0</x>
      <y>0</y>
      <width>795</width>
-     <height>23</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
