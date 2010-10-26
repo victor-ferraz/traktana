@@ -2,9 +2,17 @@
 
 = Fundamentação Teórica =
 
+A capacidade de ionizar gases foi um aspecto dos raios-x identificado desde os tempos de sua descoberta. Apesar de terem sido desenvolvidos vários tipos de detetores para diferentes aplicações dos raios-x, os detetores a gás foram historicamente os mais utilizados, e continuam sendo desenvolvidos por responderem satisfatoriamente a diversos requisitos considerados conflitantes em muitas aplicações.
 
+Num detetor a gás  a idéia básica é coletar em eletrodos a carga elétrica liberada por ionização após a passagem dos fótons por um meio gasoso (figura1). Se Ef é a energia do fóton e Ei a energia média requerida por ionização, um número médio Ef/Ei   de pares elétron-íon são liberados por fóton absorvido. Estes pares tendem a se neutralizar e se recombinar com as moléculas do próprio gás. Para a detecção efetiva do fóton faz-se necessário o estabelecimento de uma diferença de potencial elétrico, V0, de modo que os pares sejam separados e coletados em eletrodos.
 
-== Details ==
+== Detetores de Raios-X a Gás ==
+
+== Eletrodos Multifilares == 
+
+== Processo de Tecelagem de Eletrodos Multifilares ==
+
+== Automação do Processo de Tecelagem de Eletrodos Multifilares ==
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
