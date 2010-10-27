@@ -10,9 +10,6 @@
 Traktana::Traktana() {
 }
 
-Traktana::Traktana(const Traktana& orig) {
-}
-
 Traktana::~Traktana() {
 }
 

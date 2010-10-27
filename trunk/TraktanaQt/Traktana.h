@@ -8,10 +8,12 @@
 #ifndef TRAKTANA_H
 #define	TRAKTANA_H
 
-class Traktana {
+#include "TraktanaDebug.h"
+
+
+class Traktana : public TraktanaDebug {
 public:
     Traktana();
-    Traktana(const Traktana& orig);
     virtual ~Traktana();
 private:
 

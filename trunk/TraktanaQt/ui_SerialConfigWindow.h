@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'SerialConfigWindow.ui'
 **
-** Created: Sun Oct 24 20:31:27 2010
+** Created: Mon Oct 25 13:40:44 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

@@ -9,17 +9,38 @@
 #define	_MAINWINDOW_H
 
 #include "ui_MainWindow.h"
-#include "SerialConfigWindow.h"
+#include "Program.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
     MainWindow();
     virtual ~MainWindow();
+public slots:
+    // Menu File
+    void on_actionExit_triggered();
+    // Menu Operation
+    void on_actionStart_triggered();
+    void on_actionPause_triggered();
+    void on_actionRestart_triggered();
+    // Menu View
+    void on_actionOperation_triggered();
+    void on_actionStatus_triggered();
+    void on_actionDebug_triggered();
+    void on_actionOperationTool_triggered();
+    void on_actionDeviceTool_triggered();
+    // Menu Device
+    void on_actionConnect_triggered();
+    void on_actionConnect_Debug_triggered();
+    // Menu Configuration
+    void on_actionSerialDeviceConfig_triggered();
+    void on_actionSerialDebugConfig_triggered();
+    // Menu Help
+    void on_actionAbout_triggered();
+
 private:
     Ui::MainWindow widget;
-    SerialConfigWindow serialConfigWinDevice;
-    SerialConfigWindow serialConfigWinDebug;
+    Program *program;
 };
 
 #endif	/* _MAINWINDOW_H */
