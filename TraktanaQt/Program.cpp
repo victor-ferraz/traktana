@@ -8,11 +8,13 @@
 #include "Program.h"
 
 Program::Program() {
-}
-
-Program::Program(const Program& orig) {
+    traktana = new Traktana();
 }
 
 Program::~Program() {
 }
 
+bool Program::connectUSB(){
+    // traktana->connect();
+    return true;
+}

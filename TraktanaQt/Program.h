@@ -8,12 +8,15 @@
 #ifndef PROGRAM_H
 #define	PROGRAM_H
 
+#include "Traktana.h"
+
 class Program {
 public:
     Program();
-    Program(const Program& orig);
     virtual ~Program();
+    bool connectUSB();
 private:
+    Traktana *traktana;
 
 };
 

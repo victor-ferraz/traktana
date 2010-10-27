@@ -10,20 +10,19 @@
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>Traktana.h</itemPath>
-        <itemPath>TraktanaDebug.cpp</itemPath>
+        <itemPath>TraktanaDebug.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
                      displayName="Interface"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>MainWindow.h</itemPath>
-        <itemPath>SerialConfigWindow.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="io"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
-        <itemPath>SerialInterface.h</itemPath>
+        <itemPath>USBInterface.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4"
                      displayName="main"
@@ -41,7 +40,7 @@
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>Traktana.cpp</itemPath>
-        <itemPath>TraktanaDebug.h</itemPath>
+        <itemPath>TraktanaDebug.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
                      displayName="Interface"
@@ -49,14 +48,12 @@
                      kind="SOURCE_LOGICAL_FOLDER">
         <itemPath>MainWindow.cpp</itemPath>
         <itemPath>MainWindow.ui</itemPath>
-        <itemPath>SerialConfigWindow.cpp</itemPath>
-        <itemPath>SerialConfigWindow.ui</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="io"
                      projectFiles="true"
                      kind="SOURCE_LOGICAL_FOLDER">
-        <itemPath>SerialInterface.cpp</itemPath>
+        <itemPath>USBInterface.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f4"
                      displayName="main"
