@@ -9,6 +9,7 @@
 #define	USBINTERFACE_H
 
 #include <ftdi.hpp>
+using namespace Ftdi;
 
 class USBInterface {
 public:
@@ -25,7 +26,8 @@ public:
     bool disconnectInterfaceC();
     bool disconnectInterfaceD();
 private:
-    
+
+    Context *ftdih;
     bool connected;
     bool connectedA;
     bool connectedB;

@@ -17,27 +17,27 @@ TraktanaDebug::~TraktanaDebug() {
 }
 
 bool TraktanaDebug::connectUSB() {
-
+    return false;
 }
 
 bool TraktanaDebug::disconnectUSB() {
-
+return false;
 }
 
 bool TraktanaDebug::connectDevice() {
-
+return false;
 }
 
 bool TraktanaDebug::disconnectDevice() {
-
+return false;
 }
 
 bool TraktanaDebug::connectDebug() {
-
+return false;
 }
 
 bool TraktanaDebug::disconnectDebug() {
-
+return false;
 }
 
 void TraktanaDebug::writeDevice(unsigned char* cmd) {
@@ -45,7 +45,8 @@ void TraktanaDebug::writeDevice(unsigned char* cmd) {
 }
 
 char* TraktanaDebug::receiveDevice() {
-
+    char ch = 's';
+    return &ch;
 }
 
 void TraktanaDebug::writeDebug(unsigned char* cmd) {
@@ -53,7 +54,8 @@ void TraktanaDebug::writeDebug(unsigned char* cmd) {
 }
 
 char* TraktanaDebug::receiveDebug() {
-
+    char ch = 's';
+    return &ch;
 }
 
 void TraktanaDebug::rotateStepper(long steps, double freq, bool direction, int motor) {

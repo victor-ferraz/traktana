@@ -8,11 +8,15 @@
 #include "USBInterface.h"
 
 USBInterface::USBInterface() {
+
     connected = false;
     connectedA = false;
     connectedB = false;
     connectedC = false;
     connectedD = false;
+
+    ftdih = new Context();
+
 }
 
 USBInterface::~USBInterface() {
