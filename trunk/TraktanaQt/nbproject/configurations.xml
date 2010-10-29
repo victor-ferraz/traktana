@@ -92,7 +92,25 @@
         <modules>core gui</modules>
       </qt>
       <compileType>
+        <cTool>
+          <commandLine>-lftdi</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>-lftdi</commandLine>
+        </ccTool>
       </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <additionalOptions>-v</additionalOptions>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
     </conf>
     <conf name="Release" type="4">
       <toolsSet>

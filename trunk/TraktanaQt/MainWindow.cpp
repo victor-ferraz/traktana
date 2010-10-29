@@ -28,19 +28,42 @@ void MainWindow::on_actionRestart_triggered(){
 
 }
 void MainWindow::on_actionOperation_triggered(){
-
+    if(widget.actionOperation->isChecked()){
+        widget.subwindowOperation->showNormal();
+        widget.subwindowOperation->activateWindow();
+    }else{
+        widget.subwindowOperation->showMinimized();
+    }
 }
 void MainWindow::on_actionStatus_triggered(){
-
+    if(widget.actionStatus->isChecked()){
+        widget.subwindowStatus->showNormal();
+        widget.subwindowStatus->activateWindow();
+    }else{
+        widget.subwindowStatus->showMinimized();
+    }
 }
 void MainWindow::on_actionDebug_triggered(){
-
+    if(widget.actionDebug->isChecked()){
+        widget.subwindowDebug->showNormal();
+        widget.subwindowDebug->activateWindow();
+    }else{
+        widget.subwindowDebug->showMinimized();
+    }
 }
-void MainWindow::on_actionOperationTool_triggered(){
-
+void MainWindow::on_actionOperationTool_triggered() {
+    if (widget.actionOperationTool->isChecked()) {
+        widget.toolBarOperation->show();
+    } else {
+        widget.toolBarOperation->hide();
+    }
 }
 void MainWindow::on_actionDeviceTool_triggered(){
-
+    if (widget.actionDeviceTool->isChecked()) {
+        widget.toolBarConnect->show();
+    } else {
+        widget.toolBarConnect->hide();
+    }
 }
 void MainWindow::on_actionConnect_triggered(){
 
