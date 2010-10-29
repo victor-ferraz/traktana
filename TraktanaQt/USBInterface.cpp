@@ -5,7 +5,9 @@
  * Created on 26 de Outubro de 2010, 21:32
  */
 
+#include <iostream>
 #include "USBInterface.h"
+
 
 USBInterface::USBInterface() {
 
@@ -15,15 +17,26 @@ USBInterface::USBInterface() {
     connectedC = false;
     connectedD = false;
 
-    ftdih = new Context();
-
+    vid = 0x0403;
+    pid = 0x6010;
+    baudrate = 115200;
+    interface = INTERFACE_A;
 }
 
 USBInterface::~USBInterface() {
 }
 
 bool USBInterface::connect() {
-    return false;
+//    int ret;
+//    ret = ftdih.open(vid, pid);
+//    if (ret == 0) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+
+    return true;
+
 }
 
 bool USBInterfacedisconnect() {

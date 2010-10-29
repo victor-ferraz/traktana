@@ -37,11 +37,11 @@ OBJECTFILES=
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=-lftdi
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-lftdi
+CXXFLAGS=-lftdi
 
 # Fortran Compiler Flags
 FFLAGS=
