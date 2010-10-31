@@ -98,6 +98,11 @@
         <ccTool>
           <commandLine>-lftdi</commandLine>
         </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lftdipp</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <packaging>
         <packType>Tar</packType>
