@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>Victor Ferraz</author>
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
@@ -269,6 +270,45 @@
      <property name="windowTitle">
       <string>Debug</string>
      </property>
+     <widget class="QTextEdit" name="textEditDebug">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>241</width>
+        <height>171</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>225</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelCmd">
+         <property name="text">
+          <string>Command:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditDebugCmd"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButtonSend">
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -309,7 +349,6 @@
      <string>Operation</string>
     </property>
     <addaction name="actionStart"/>
-    <addaction name="actionPause"/>
     <addaction name="actionRestart"/>
    </widget>
    <widget class="QMenu" name="menuDevice">
@@ -431,6 +470,9 @@
    </property>
   </action>
   <action name="actionStart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset>
      <normalon>icons/play.png</normalon>
@@ -446,21 +488,6 @@
     <bool>false</bool>
    </property>
   </action>
-  <action name="actionPause">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>icons/pause.png</normaloff>icons/pause.png</iconset>
-   </property>
-   <property name="text">
-    <string>Pause</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+P</string>
-   </property>
-  </action>
   <action name="actionRestart">
    <property name="icon">
     <iconset>
@@ -474,6 +501,9 @@
    </property>
   </action>
   <action name="actionConnect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset>
      <normaloff>icons/connect.png</normaloff>icons/connect.png</iconset>
@@ -486,6 +516,9 @@
    </property>
   </action>
   <action name="actionConnect_Debug">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset>
      <normaloff>icons/connectbug.png</normaloff>icons/connectbug.png</iconset>

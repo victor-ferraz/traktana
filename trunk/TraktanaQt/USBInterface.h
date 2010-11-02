@@ -36,8 +36,7 @@ private:
 
     char buf[1024];
     int f, i;
-    int vid;
-    int pid;
+    int vid,pid;
     int baudrate;
     int interface;
 
