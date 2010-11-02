@@ -5,9 +5,8 @@
  * Created on 26 de Outubro de 2010, 21:32
  */
 
-#include <iostream>
 #include "USBInterface.h"
-
+#include <iostream>
 
 USBInterface::USBInterface() {
 
@@ -17,8 +16,7 @@ USBInterface::USBInterface() {
     connectedC = false;
     connectedD = false;
 
-    vid = 0x0403;
-    pid = 0x6010;
+    vid = 0x0403, pid = 0x6010;
     baudrate = 115200;
     interface = INTERFACE_A;
 }
@@ -34,8 +32,28 @@ bool USBInterface::connect() {
 //    } else {
 //        return false;
 //    }
+    std::cout << "Searching... \n";
+    List* list = List::find_all(0x0403,0x6010);
+    for (List::iterator it = list->begin(); it != list->end(); it++)
+    {
+        std::cout << "FTDI (" << &*it << "): "
+        << it->vendor() << ", "
+        << it->description() << ", "
+        << it->serial();
 
-    return true;
+        // Open test
+        if(it->open() == 0){
+           std::cout << " (Open OK)";
+        }else{
+           std::cout << " (Open FAILED)";
+           it->close();
+        }
+        std::cout << std::endl;
+
+    }
+    std::cout << "Finished\n";
+
+        return false;
 
 }
 

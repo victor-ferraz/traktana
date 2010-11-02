@@ -21,7 +21,6 @@ public slots:
     void on_actionExit_triggered();
     // Menu Operation
     void on_actionStart_triggered();
-    void on_actionPause_triggered();
     void on_actionRestart_triggered();
     // Menu View
     void on_actionOperation_triggered();
@@ -37,7 +36,8 @@ public slots:
     void on_actionSerialDebugConfig_triggered();
     // Menu Help
     void on_actionAbout_triggered();
-
+    // Interface Buttons
+    void on_pushButtonSend_clicked();
 private:
     Ui::MainWindow widget;
     Program *program;

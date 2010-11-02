@@ -17,7 +17,7 @@ TraktanaDebug::~TraktanaDebug() {
 }
 
 bool TraktanaDebug::connectUSB() {
-    return false;
+    return usb->connect();
 }
 
 bool TraktanaDebug::disconnectUSB() {

@@ -15,6 +15,6 @@ Program::~Program() {
 }
 
 bool Program::connectUSB(){
-    // traktana->connect();
-    return true;
+    bool ret = traktana->connectUSB();
+    return ret;
 }
