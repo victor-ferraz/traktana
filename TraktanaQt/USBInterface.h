@@ -25,21 +25,23 @@ public:
     bool disconnectInterfaceB();
     bool disconnectInterfaceC();
     bool disconnectInterfaceD();
+
 private:
 
     //Ftdi::Context ftdih;
+    //struct ftdi_context ftdih;
     bool connected;
     bool connectedA;
     bool connectedB;
     bool connectedC;
     bool connectedD;
 
-    char buf[1024];
-    int f, i;
+    unsigned char buf[1024];
     int vid,pid;
     int baudrate;
     int interface;
 
+    Ftdi::Context *ftdih;
 };
 
 #endif	/* USBINTERFACE_H */
