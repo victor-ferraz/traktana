@@ -15,6 +15,7 @@ class USBInterface {
 public:
     USBInterface();
     virtual ~USBInterface();
+    void USBList(int vid, int pid);
     bool connect();
     bool disconnect();
     bool connectInterfaceA();
@@ -37,11 +38,9 @@ private:
     bool connectedD;
 
     unsigned char buf[1024];
-    int vid,pid;
+    List::iterator itftdi;
     int baudrate;
     int interface;
-
-    Ftdi::Context *ftdih;
 };
 
 #endif	/* USBINTERFACE_H */
