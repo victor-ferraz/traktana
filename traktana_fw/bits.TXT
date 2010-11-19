@@ -1,0 +1,14 @@
+   Address    Value   Field             Category                             Setting                
+
+   F80000     C703  FOSFPR  Oscillator                      FRC w/PLL 16x                           
+                    FCKSMEN Clock Switching and Monitor     Sw Disabled, Mon Disabled               
+   F80002     003F  FWPSB   WDT Prescaler B                 1:16                                    
+                    FWPSA   WDT Prescaler A                 1:512                                   
+                    WDT     Watchdog Timer                  Disabled                                
+   F80004     8730  FPWRT   POR Timer Value                 Timer Disabled                          
+                    BODENV  Brown Out Voltage               Reserved                                
+                    BOREN   PBOR Enable                     Disabled                                
+                    MCLRE   Master Clear Enable             Enabled                                 
+   F8000A     0007  GWRP    General Code Segment Write ProtectDisabled                                
+                    GCP     General Segment Code Protection Disabled                                
+   F8000C     C003  ICS     Comm Channel Select             Use PGC/EMUC and PGD/EMUD               
