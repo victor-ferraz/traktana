@@ -9,11 +9,11 @@ LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
 LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
 PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|src\main.c|src\uart.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -Wall
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1
 [File001]
 Location=E:\Documentos\Victor\Projetos MPLAB\traktana_fw\tmp\uart.o
 Folder=Intermediary
@@ -22,12 +22,38 @@ LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
 LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
 PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|src\main.c|src\uart.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -Wall
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1
 [File002]
+Location=E:\Documentos\Victor\Projetos MPLAB\traktana_fw\tmp\steppers.o
+Folder=Intermediary
+DeviceName=dsPIC30F3014
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1
+[File003]
+Location=E:\Documentos\Victor\Projetos MPLAB\traktana_fw\tmp\timers.o
+Folder=Intermediary
+DeviceName=dsPIC30F3014
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1
+[File004]
 Location=E:\Documentos\Victor\Projetos MPLAB\traktana_fw\.\obj\Traktana.cof
 Folder=Output
 DeviceName=dsPIC30F3014
@@ -35,12 +61,12 @@ LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
 LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
 PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|src\main.c|src\uart.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem
 TraceCmdString=
-DebugOptions=--defsym=__MPLAB_DEBUG=1
-[File003]
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_PICKIT2=1 --defsym=__ICD2RAM=1
+[File005]
 Location=E:\Documentos\Victor\Projetos MPLAB\traktana_fw\.\obj\Traktana.hex
 Folder=Output
 DeviceName=dsPIC30F3014
@@ -48,11 +74,11 @@ LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
 LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
 PPAD=$(BINDIR)|./obj||$(TMPDIR)|./tmp||$(AINDIR)||$(INCDIR)|./h||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|src\main.c|src\uart.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|src\main.c|src\uart.c|src\steppers.c|src\timers.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem
 TraceCmdString=
-DebugOptions=--defsym=__MPLAB_DEBUG=1
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_PICKIT2=1 --defsym=__ICD2RAM=1
 [TOOL_LOC_STAMPS]
 tool_loc{069BD372-6CA0-40D4-BF2F-5DC806D05083}=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
 tool_loc{433C3D55-811D-409D-A6BF-159CF9355B42}=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
