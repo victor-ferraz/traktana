@@ -19,7 +19,6 @@
  ********************************************************************/
 
 #include <p30F3014.h>            //Standard header file
-//#include "steppers.h"
 //---------------------------------------------------------------------------
 //Prototypes
 void InitDevice();
@@ -27,6 +26,7 @@ int init_UART(void);
 void loopback_UART(void);
 void process_cmd(void);
 void step_stepper1();
+void Motor_PID_Init (void);
 //---------------------------------------------------------------------------
 //Variables
 unsigned long freq=200000;
@@ -39,9 +39,6 @@ int main(void)
 	InitDevice();
     while(1) 	//Loop forever
     {
-	//	step_stepper1();
-	//	__delay32(freq);
-//		rotate_stepper2(400000,0x01,freq,0x00);
 //		loopback_UART();
 //		process_cmd();
     }
@@ -51,5 +48,5 @@ void InitDevice(){
 	TRISB = 0x00; 	// configure PORTB for output (STEPPERS)
 	ADPCFG = 0xFFF;	// configure PORTB for digital output
 	//init_UART();
-	init_Timers();
+	init_Steppers();
 }
