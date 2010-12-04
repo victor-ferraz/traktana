@@ -2,16 +2,18 @@
 #include <timer.h>
 
 #define STEPPERS_PORT 		LATB
+#define STEPPERS_TRIS 		TRISB
 #define HALF_MODE			0
 #define FULL_MODE			1
 #define COUNTER_CLOCK_WISE	0
 #define CLOCK_WISE			1
 //#define SENSORS
-
+//--------------------------------------------------------------------------------------------------------------
 // Global Variables (Motor control with timers and more)
 unsigned char stepper_enable1=0,stepper_enable2=0;
 unsigned char direction1=1,direction2=1,mode_step1=0,mode_step2=0;
 unsigned long frequency1,frequency2;
+// Local Variables and contants
 int pos_stepper1 = 0;
 int pos_stepper2 = 0;
 const unsigned char step_full1[4]= {0b11110001,
@@ -42,24 +44,37 @@ const unsigned char step_half2[8]= {0b00011111,
 									0b11001111,
 									0b10001111,
 									0b10011111};
-
-
+//--------------------------------------------------------------------------------------------------------------
+// Prototypes
+// void Init_Steppers();
+void disable_stepper1();
+void disable_stepper2();
+void step_stepper1();
+void step_stepper2();
+void rotate_stepper1(unsigned long steps, unsigned char direction, unsigned long frequency, unsigned char mode);
+void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned long frequency, unsigned char mode);
+//--------------------------------------------------------------------------------------------------------------
 // Timer1 Interrupt routine for stepper 1
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void){
 
-	step_stepper1();
+	if(stepper_enable1) step_stepper1();
 	IFS0bits.T1IF = 0;       /* clear interrupt flag     */
 	return;
 }
-// Timer3 Interrupt routine for stepper 2
+//--------------------------------------------------------------------------------------------------------------
+// Timer2 Interrupt routine for stepper 2
 void __attribute__((interrupt, no_auto_psv)) _T2Interrupt(void){
 
 	step_stepper2();
 	IFS0bits.T2IF = 0;       /* clear interrupt flag     */
 	return;
 }
+//--------------------------------------------------------------------------------------------------------------
 // Init Timers
-void init_Steppers(){
+void Init_Steppers(){
+
+	STEPPERS_TRIS = 0x00; 	// configure PORTB for output (STEPPERS)
+	ADPCFG = 0xFFF;			// configure PORTB for digital output
 
 /* Enable Timer1 Interrupt and Priority to "1" */
     ConfigIntTimer1(T1_INT_PRIOR_1 & T1_INT_ON);
@@ -74,7 +89,7 @@ void init_Steppers(){
 				 & T2_SOURCE_INT, 0xFFFF);
 
 }
-
+//--------------------------------------------------------------------------------------------------------------
 // Stepper Control Routines
 void rotate_stepper1(unsigned long steps, unsigned char direction, unsigned long frequency, unsigned char mode){
 	
@@ -89,7 +104,7 @@ void rotate_stepper1(unsigned long steps, unsigned char direction, unsigned long
 		}else{			// CounterClockWise Direction in Full Stepper Mode
 			while(steps > 0){
 				if(pos_stepper1 < 0) pos_stepper1 = 3;
-				STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1++];
+				STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1--];
 				__delay32(frequency);
 				steps--;
 			}
@@ -105,7 +120,7 @@ void rotate_stepper1(unsigned long steps, unsigned char direction, unsigned long
 		}else{			// CounterClockWise Direction in Half Stepper Mode
 			while(steps > 0){
 				if(pos_stepper1 < 0) pos_stepper1 = 7;
-				STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_half1[pos_stepper1++];
+				STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_half1[pos_stepper1--];
 				__delay32(frequency);
 				steps--;
 			}
@@ -113,7 +128,7 @@ void rotate_stepper1(unsigned long steps, unsigned char direction, unsigned long
 	}		
 }
 
-void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned int frequency, unsigned char mode){
+void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned long frequency, unsigned char mode){
 	if(mode){	// Full Stepper Mode
 		if(direction){	// ClockWise Direction in Full Stepper Mode
 			while(steps > 0){
@@ -125,7 +140,7 @@ void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned int 
 		}else{			// CounterClockWise Direction in Full Stepper Mode
 			while(steps > 0){
 				if(pos_stepper2 < 0) pos_stepper2 = 3;
-				STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_full2[pos_stepper2++];
+				STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_full2[pos_stepper2--];
 				__delay32(frequency);
 				steps--;
 			}
@@ -141,16 +156,15 @@ void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned int 
 		}else{			// CounterClockWise Direction in Half Stepper Mode
 			while(steps > 0){
 				if(pos_stepper2 < 0) pos_stepper2 = 7;
-				STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_half2[pos_stepper2++];
+				STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_half2[pos_stepper2--];
 				__delay32(frequency);
 				steps--;
 			}
 		}
 	}
 }
-
+//--------------------------------------------------------------------------------------------------------------
 // Functions for use with interrupt timers
-
 void step_stepper1(){
 	if(mode_step1){	// Full Stepper Mode
 		if(direction1){	// ClockWise Direction in Full Stepper Mode
@@ -158,7 +172,7 @@ void step_stepper1(){
 			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1++];
 		}else{			// CounterClockWise Direction in Full Stepper Mode
 			if(pos_stepper1 < 0) pos_stepper1 = 3;
-			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1++];
+			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1--];
 		}
 	}else{		// Half Stepper Mode
 		if(direction1){	// ClockWise Direction in Half Stepper Mode
@@ -166,7 +180,7 @@ void step_stepper1(){
 			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_half1[pos_stepper1++];
 		}else{			// CounterClockWise Direction in Half Stepper Mode
 			if(pos_stepper1 < 0) pos_stepper1 = 7;
-			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_half1[pos_stepper1++];
+			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_half1[pos_stepper1--];
 		}
 	}		
 }
@@ -178,7 +192,7 @@ void step_stepper2(){
 			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_full2[pos_stepper2++];
 		}else{			// CounterClockWise Direction in Full Stepper Mode
 			if(pos_stepper2 < 0) pos_stepper2 = 3;
-			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_full2[pos_stepper2++];
+			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_full2[pos_stepper2--];
 		}
 	}else{		// Half Stepper Mode
 		if(direction2){	// ClockWise Direction in Half Stepper Mode
@@ -186,7 +200,16 @@ void step_stepper2(){
 			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_half2[pos_stepper2++];
 		}else{			// CounterClockWise Direction in Half Stepper Mode
 			if(pos_stepper2 < 0) pos_stepper2 = 7;
-			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_half2[pos_stepper2++];
+			STEPPERS_PORT = (STEPPERS_PORT|0xF0)& step_half2[pos_stepper2--];
 		}
 	}		
 }
+//-------------------------------------------------------------------------------------
+// Disable functions (turn-off motors)
+void disable_stepper1(){
+	STEPPERS_PORT &= 0xF0;
+}
+void disable_stepper2(){
+	STEPPERS_PORT &= 0x0F;
+}
+

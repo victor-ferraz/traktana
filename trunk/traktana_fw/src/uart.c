@@ -18,6 +18,13 @@ unsigned char cmdissued = 0;
 
 //unsigned int bufadr = (unsigned int)&buf;
 
+//-------------------------------------------
+// Extern Global Variables and functions to control the program
+extern unsigned char stepper_enable1,stepper_enable2;
+extern unsigned char direction1,direction2,mode_step1,mode_step2;
+extern void disable_stepper1();
+extern void disable_stepper2();
+
 /* This is UART1 receive ISR */
 /* Implements a Ring Buffer */ 
 void __attribute__((interrupt, no_auto_psv)) _U1RXInterrupt(void) 
@@ -148,106 +155,120 @@ void process_cmd(void)
 {
 	char goodcmd[]	= "- Command Accepted.\n\n\r\0";
 	char evilcmd[]	= "- BAD Command.\n\n\r\0";
-	char vusage[]	= "- Usage: v [channel (0-1)] [voltage (1.0 - 7.0)]\n\n\r\0";
-	char cinval[]	= "- Invalid Channel.\n\n\r\0";
 
 	char *r = evilcmd;
-	char value[4];
 
 	if (cmdissued == 1)
 	{
-		/*
-		while(*rbufptr != 0x0D)
-		{
-			putcUART1(*rbufptr++);
-			while(BusyUART1());
-		}
-		rbufptr	= (char*)bufstt;
-		wbufptr = rbufptr;
-		*/
-
 		switch(*rbufptr++)
 		{
-
-			/*** VOLTAGE SET ***/
-
-			case 'v':
-				/******************/	
-				//putcUART1('V');
-				//while(BusyUART1());
-				/******************/
-
-				if ((*rbufptr == '\r') || (*rbufptr == '\n'))
-					r = vusage;
-
-				//Param 0 - Channel
-			
-				else if (*rbufptr++ == ' ')
-				{
-					switch(*rbufptr++)
-					{
-						//Channel 0
-						case '0':
-
-							//Param 1 - Voltage
-
-							if (*rbufptr++ == ' ')
-							{
-								//memcpy(value, rbufptr, 3);
-					
-								//__asm__ ("bclr.b  IEC0+1,#3");
-
-								//PIDJ0_desired_voltage = 
-									(unsigned int) ((ato88(value) * 0xCC9AL) >> 16);
-
-								//PIDJ0_integral_error = 0;
-
-								//__asm__ ("bset.b  IEC0+1,#3");
-
-								//value[3] = '\0';
-								//putsUART1 ((unsigned int *)value);
-								//while(BusyUART1());
-								r = goodcmd;
+		/*** STEPPER COMMANDS ***/
+			case 's':
+				putcUART1('s');
+				if(*rbufptr++ == 't'){
+					putcUART1('t');
+					switch(*rbufptr++){
+						case 's':{
+							putcUART1('s');
+							// sts command received (start)
+							if(*rbufptr++ == ' '){
+								// sts parameters [1 or 2]
+								if(*rbufptr == '1'){
+									r = goodcmd;stepper_enable1=1;
+								}else if(*rbufptr++ == '2'){
+									r = goodcmd;stepper_enable2=1;
+								}	
 							}
-							else
-								r = vusage;
-						break;
-	
-						//Channel 1
-						case '1':
-
-							//Param 1 - Voltage
-
-							if (*rbufptr++ == ' ')
-							{
-								//memcpy(value, rbufptr, 3);
-					
-								//PIDJ1_desired_voltage = 
-									//(unsigned int) ((ato88(value) * 0xCC9AL) >> 16);
-								
-								r = goodcmd;
+						}break;
+						case 'p':{
+							putcUART1('p');
+							// stp command received (stop)
+							if(*rbufptr++ == ' '){
+								// stp parameters [1 or 2]
+								if(*rbufptr == '1'){
+									r = goodcmd;stepper_enable1=0;
+								}else if(*rbufptr++ == '2'){
+									r = goodcmd;stepper_enable2=0;
+								}	
 							}
-							else
-								r = vusage;
-						break;
-
-						//Invalid Channel
-						default:
-							r = cinval;
-						break;	
+						}break;
+						case 'd':{
+							putcUART1('d');
+							// std command received (disable)
+							if(*rbufptr == ' '){
+								*rbufptr++;
+								// std parameters [1 or 2]
+								if(*rbufptr == '1'){
+									r = goodcmd;disable_stepper1();
+								}else if(*rbufptr++ == '2'){
+									r = goodcmd;disable_stepper2();
+								}	
+							}else{
+								switch(*rbufptr++){
+									// stdc command received (direction clockwise)
+									case 'c':{
+									 if(*rbufptr++ == ' '){
+										// stdc parameters [1 or 2]
+										if(*rbufptr == '1'){
+											r = goodcmd;direction1=1;
+										}else if(*rbufptr++ == '2'){
+											r = goodcmd;direction2=1;
+										}
+									 }
+									}break;	
+									// stdh command received (direction counter clockwise)
+									case 'h':{
+									 if(*rbufptr++ == ' '){
+										// stdh parameters [1 or 2]
+										if(*rbufptr == '1'){
+											r = goodcmd;direction1=0;
+										}else if(*rbufptr++ == '2'){
+											r = goodcmd;direction2=0;
+										}
+									 }
+									}break;	
+								}
+							}
+						}break;
+						case 'm':{
+							putcUART1('m');
+								switch(*rbufptr++){
+									// stmf command received (Full Step Mode)
+									case 'f':{
+									 if(*rbufptr++ == ' '){
+										// stdc parameters [1 or 2]
+										if(*rbufptr == '1'){
+											r = goodcmd;mode_step1=1;
+										}else if(*rbufptr++ == '2'){
+											r = goodcmd;mode_step2=1;
+										}
+									 }
+									}break;	
+									// stmh command received (Half Step Mode)
+									case 'h':{
+									 if(*rbufptr++ == ' '){
+										// stdh parameters [1 or 2]
+										if(*rbufptr == '1'){
+											r = goodcmd;mode_step1=0;
+										}else if(*rbufptr++ == '2'){
+											r = goodcmd;mode_step2=0;
+										}
+									 }
+									}break;	
+								}
+						}break;
+						case 'f':{
+							putcUART1('f');
+							r = goodcmd;
+						}break;
+						// invalid command
+						default: r = evilcmd;break;
 					}
 				}
-				else
-					r = evilcmd;
 			break;
-			
-			/*** CURRENT SET ***/
-
-			case 'i':
-				putcUART1('I');
-				while(BusyUART1());
+			/*** DC MOTOR COMMANDS ***/
+			case 'm':
 			break;
-			
 		}
 
 		rbufptr	= (char*)bufstt;
@@ -260,7 +281,7 @@ void process_cmd(void)
 	}
 }
 
-int init_UART(void)
+int Init_UART(void)
 {
 //OSCTUN = 0x09;
 
