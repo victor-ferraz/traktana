@@ -1,10 +1,7 @@
-#ifndef __dsPIC30F3014__
-#define __dsPIC30F3014__
-#endif
-
-#include "p30f3014.h"
+#include "p30fxxxx.h"
 #include <uart.h>
 #include <string.h>
+#include <outcompare.h>
 
 #define UART_BUFFER_SIZE	20
 
@@ -268,6 +265,47 @@ void process_cmd(void)
 			break;
 			/*** DC MOTOR COMMANDS ***/
 			case 'm':
+				putcUART1('m');
+				if(*rbufptr++ == 'd'){
+					putcUART1('d');
+					if(*rbufptr++ == 'c'){
+						putcUART1('c');
+						switch(*rbufptr++){
+							case 'r':{
+								putcUART1('r');
+								// mdcr command received (start)
+								if(*rbufptr++ == ' '){
+									// mdcr parameters []
+									r = goodcmd; SetDCOC1PWM(*rbufptr);
+								}
+							}break;
+							case 'p':{
+								putcUART1('p');
+								// mdcp command received (start)
+								if(*rbufptr++ == ' '){
+									// mdcp parameters []
+									
+								}
+							}break;
+							case 'i':{
+								putcUART1('i');
+								// mdci command received (start)
+								if(*rbufptr++ == ' '){
+									// mdci parameters []
+									
+								}
+							}break;
+							case 'd':{
+								putcUART1('d');
+								// mdcd command received (start)
+								if(*rbufptr++ == ' '){
+									// mdcd parameters []
+									
+								}
+							}break;
+						}
+					}
+				}
 			break;
 		}
 

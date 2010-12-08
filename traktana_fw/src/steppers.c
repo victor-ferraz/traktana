@@ -1,4 +1,4 @@
-#include "p30f3014.h"
+#include "p30fxxxx.h"
 #include <timer.h>
 
 #define STEPPERS_PORT 		LATB
