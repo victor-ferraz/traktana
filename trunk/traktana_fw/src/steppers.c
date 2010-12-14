@@ -73,8 +73,8 @@ void __attribute__((interrupt, no_auto_psv)) _T2Interrupt(void){
 // Init Timers
 void Init_Steppers(){
 
-	STEPPERS_TRIS = 0x00; 	// configure PORTB for output (STEPPERS)
-	ADPCFG = 0xFFF;			// configure PORTB for digital output
+	STEPPERS_TRIS &= 0xFF00; 	// configure PORTB for output (STEPPERS)
+	ADPCFG = 0xFFFF;			// configure PORTB for digital output
 
 /* Enable Timer1 Interrupt and Priority to "1" */
     ConfigIntTimer1(T1_INT_PRIOR_1 & T1_INT_ON);

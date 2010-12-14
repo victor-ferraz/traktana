@@ -18,25 +18,23 @@ fractional controlHistory[3] __attribute__ ((section (".ybss, bss, ymemory")));
 /* are derived from the gain coefficients, Kp, Ki and Kd */
 /* So, declare Kp, Ki and Kd in an array */
 fractional kCoeffs[] = {0,0,0};
-/* Variables required for ADC configuration */
-unsigned int Channel, PinConfig, Scanselect;
-unsigned int Adcon3_reg, Adcon2_reg, Adcon1_reg;
 
 /* This is ADCInterrupt routine for PID DC Motor Control*/
-void __attribute__((interrupt, no_auto_psv)) _ADCInterrupt(void)
+void __attribute__((interrupt, no_auto_psv)) _ADCInterrupt (void)
 {
 //        int i = 0;
-char ptr[15];
+unsigned char ptr[15];
 //		fooPID.measuredOutput = Q15(ReadADC12(0));
 /*        while (i < 3)
         {
            controlHistory[i] = ReadADC12(i);i++;
         }
 */
-		sprintf(&ptr,"\nRead: %d",ReadADC12(0));
-		putsUART1("Teste!");
-//		PID(&fooPID);
+		sprintf(&ptr,"\n\rRead: %X",ADCBUF0);
+		putsUART1(ptr);
+		PID(&fooPID);
 		//SetDCOC1PWM(fooPID.controlOutput);
+
         //Clear the A/D Interrupt flag bit or else the CPU will
         //keep vectoring back to the ISR
         IFS0bits.ADIF = 0;
@@ -98,58 +96,63 @@ Resolution				= 12 bits
     	OpenOC1(OC_TIMER3_SRC&OC_PWM_FAULT_PIN_DISABLE,0x00,0x00);
 
 
-		/* Configure ADC Channel */
-//	    Channel = ADC_CH0_POS_SAMPLEA_AN4 &  
-//    	          ADC_CH0_NEG_SAMPLEA_VREFN &
-//        	      ADC_CH0_POS_SAMPLEB_AN2& 
-//            	  ADC_CH0_NEG_SAMPLEB_AN1;
-//	    SetChanADC12(Channel);
-		/* Configure ADC Interrupt */
-    	ConfigIntADC12(ADC_INT_ENABLE & ADC_INT_PRI_0);
-		/* Configure ADC Registers */
-	    Adcon3_reg = ADC_SAMPLE_TIME_10 &
-    	             ADC_CONV_CLK_SYSTEM &
-        	         ADC_CONV_CLK_13Tcy;
+		/* Start ADC Configuration */
 
-	    Adcon2_reg = ADC_VREF_AVDD_AVSS &
-    	             ADC_SCAN_OFF &
-					 ADC_ALT_BUF_OFF &
-            	     ADC_ALT_INPUT_OFF & 
-                	 ADC_SAMPLES_PER_INT_3;
+        //ADCON1 Register
+        //Set up A/D for Automatic Sampling
+        //Use internal counter (SAMC) to provide sampling time
+        //Set up A/D conversrion results to be read in unsigned integer format.
+        //Set up Sequential sampling for multiple S/H amplifiers
+        //All other bits to their default state
+        ADCON1bits.FORM = 0;
+        ADCON1bits.SSRC = 7;
+        ADCON1bits.ASAM = 1;
 
-	    Adcon1_reg = ADC_MODULE_ON &
-    	             ADC_IDLE_CONTINUE &
-        	         ADC_FORMAT_INTG &
-            	     ADC_CLK_MPWM  &
-                	 ADC_AUTO_SAMPLING_ON;
+        //ADCON2 Register
+        //Set up A/D for interrupting after 16 samples get filled in the buffer
+        //All other bits to their default state
+        ADCON2bits.SMPI = 15;
 
-		/* Configure ADC Input Pins */
-    	PinConfig  = ENABLE_AN12_ANA;
-    	Scanselect = SCAN_NONE;
+        //ADCON3 Register
+        //We will set up the ADRC as the A/D conversion clock
+        //so that the A/D converter can operate when the device is in
+        //SLEEP mode. Also, 1 Tad period is allocated for sampling time.
+        //The conversion rate for the ADRC oscillator is depends on whether
+        //the device is a dsPIC30F or dsPIC33F device and also whether the
+        //A/D module is a 10-bit or 12-bit A/D converter.
+        //Please refer to the device Datasheet for "ADRC" conversion rate.
+        ADCON3bits.SAMC = 31;		// defines Tsample = Tad/32
+		ADCON3bits.ADCS = 63;		// defines Tad = 1,06us	
+        ADCON3bits.ADRC = 0;	
 
-		/* Apply ADC Configurations */
-	    OpenADC12(Adcon1_reg, Adcon2_reg,
-    	          Adcon3_reg,PinConfig, Scanselect);
-        
-		//Clear the A/D interrupt flag bit
+        //ADCHS Register
+        //Set up A/D Channel Select Register to convert AN12 on Mux A input
+        //of CH0 S/H amplifiers
+        ADCHS = 0x000C;
+
+        //ADCSSL Register
+        //Channel Scanning is disabled. All bits left to their default state
+        ADCSSL = 0x0000;
+
+        //ADPCFG Register
+        //Set up channels AN12 as analog input and configure rest as digital
+        TRISB |= 0x1000;
+		ADPCFG = 0xFFFF;
+        ADPCFGbits.PCFG12 = 0;
+
+        //Clear the A/D interrupt flag bit
         IFS0bits.ADIF = 0;
+
+        //Set the A/D interrupt enable bit
+        IEC0bits.ADIE = 1;
+
+        //Turn on the A/D converter
+        //This is typically done after configuring other registers
+        ADCON1bits.ADON = 1;
+
 /*
-Use the PID Controller
+Initial PID Controller
 */
         fooPID.controlReference = Q15(0.74) ;           /*Set the Reference Input for your controller */
         fooPID.measuredOutput = Q15(0.453) ;            /*Typically the measuredOutput variable is a plant response*/
-                                                        /*measured from an A/D input or a sensor. */
-                                                        /*In this example we manually set it to some value for */
-                                                        /*demonstration but the user should note that this value will */
-                                                        /*keep changing in a real application*/
-//        while (1)                                       /*We use a while(1) loop here for demonstration purposes.*/
-//        {                                               /*Typically, the PID calculation may be triggered off a timer*/
-//                                                        /*or A/D interrupt */
-//
-//                PID(&fooPID);                           /*Call the PID controller using the new measured input */
-//                                                        /*The user may place a breakpoint on "PID(&fooPID)", halt the debugger,*/
-//                                                        /*tweak the measuredOutput variable within the watch window */
-//                                                        /*and then run the debugger again */
-//        }
-
 }
