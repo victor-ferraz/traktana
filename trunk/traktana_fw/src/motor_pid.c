@@ -23,22 +23,21 @@ fractional kCoeffs[] = {0,0,0};
 void __attribute__((interrupt, no_auto_psv)) _ADCInterrupt (void)
 {
 //        int i = 0;
-unsigned char ptr[15];
-//		fooPID.measuredOutput = Q15(ReadADC12(0));
+//unsigned char ptr[15];
+		fooPID.measuredOutput = ReadADC12(0);
 /*        while (i < 3)
         {
            controlHistory[i] = ReadADC12(i);i++;
         }
 */
-		sprintf(&ptr,"\n\rRead: %X",ADCBUF0);
-		putsUART1(ptr);
+//		sprintf(&ptr,"\n\rRead: %X",ADCBUF0);
+//		putsUART1(ptr);
 		PID(&fooPID);
-		//SetDCOC1PWM(fooPID.controlOutput);
+		SetDCOC1PWM((unsigned int)(fooPID.controlOutput*4095));
 
         //Clear the A/D Interrupt flag bit or else the CPU will
         //keep vectoring back to the ISR
         IFS0bits.ADIF = 0;
-
 }
 
 
@@ -52,11 +51,11 @@ void Motor_PID_Init (void)
 Initialize the PID data structure, fooPID
 */
         fooPID.abcCoefficients = &abcCoefficient[0];    /*Set up pointer to derived coefficients */
-        fooPID.controlHistory = &controlHistory[0];     /*Set up pointer to controller history samples */
+        fooPID.controlHistory  = &controlHistory[0];     /*Set up pointer to controller history samples */
         PIDInit(&fooPID);                               /*Clear the controler history and the controller output */
-		kCoeffs[0] = Q15(0.7);
-		kCoeffs[1] = Q15(0.2);
-		kCoeffs[2] = Q15(0.07);
+		kCoeffs[0] = Q15(0.3);		// Kp
+		kCoeffs[1] = Q15(0.2);		// Ki
+		kCoeffs[2] = Q15(0.0);		// Kd
         PIDCoeffCalc(&kCoeffs[0], &fooPID);             /*Derive the a,b, & c coefficients from the Kp, Ki & Kd */
 /*
 Initialize the PWM and ADC peripherals
@@ -153,6 +152,10 @@ Resolution				= 12 bits
 /*
 Initial PID Controller
 */
-        fooPID.controlReference = Q15(0.74) ;           /*Set the Reference Input for your controller */
-        fooPID.measuredOutput = Q15(0.453) ;            /*Typically the measuredOutput variable is a plant response*/
+//        fooPID.controlReference = Q15(0.74) ;           /*Set the Reference Input for your controller */
+//        fooPID.measuredOutput = Q15(0.453) ;            /*Typically the measuredOutput variable is a plant response*/
+
+		fooPID.controlReference = 0x000A;           	/*Set the Reference Input for your controller */
+        fooPID.measuredOutput 	= 0x00;
 }
+
