@@ -3,6 +3,7 @@
 
 #define STEPPERS_PORT 		LATB
 #define STEPPERS_TRIS 		TRISB
+#define MAIN_SWITCH			PORTBbits.RB8
 #define HALF_MODE			0
 #define FULL_MODE			1
 #define COUNTER_CLOCK_WISE	0
@@ -73,17 +74,18 @@ void __attribute__((interrupt, no_auto_psv)) _T2Interrupt(void){
 // Init Timers
 void Init_Steppers(){
 
-	STEPPERS_TRIS &= 0xFF00; 	// configure PORTB for output (STEPPERS)
-	ADPCFG = 0xFFFF;			// configure PORTB for digital output
+	STEPPERS_TRIS	&= 0xFE00; 	// configure PORTB for output (STEPPERS)
+	ADPCFG			 = 0xFFFF;	// configure PORTB for digital output
+	MAIN_SWITCH		 = 0;		// turn on the main switch mosfet
 
-/* Enable Timer1 Interrupt and Priority to "1" */
-    ConfigIntTimer1(T1_INT_PRIOR_1 & T1_INT_ON);
+/* Enable Timer1 Interrupt and Priority to "5" */
+    ConfigIntTimer1(T1_INT_PRIOR_6 & T1_INT_ON);
 
     OpenTimer1(T1_ON & T1_GATE_OFF & T1_PS_1_8 & 
 			 	T1_SOURCE_INT, 0xFFFF);
 
-/* Enable Timer2 Interrupt and Priority to "1" */
-    ConfigIntTimer2(T2_INT_PRIOR_1 & T2_INT_ON);
+/* Enable Timer2 Interrupt and Priority to "5" */
+    ConfigIntTimer2(T2_INT_PRIOR_6 & T2_INT_ON);
 
     OpenTimer2(T2_ON & T2_GATE_OFF & T2_PS_1_8 
 				 & T2_SOURCE_INT, 0xFFFF);
@@ -166,13 +168,17 @@ void rotate_stepper2(unsigned long steps, unsigned char direction, unsigned long
 //--------------------------------------------------------------------------------------------------------------
 // Functions for use with interrupt timers
 void step_stepper1(){
+	
+	unsigned char temp = 0;
+
 	if(mode_step1){	// Full Stepper Mode
 		if(direction1){	// ClockWise Direction in Full Stepper Mode
 			if(pos_stepper1 > 3) pos_stepper1 = 0;
-			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1++];
+			temp = (STEPPERS_PORT|0x0F) & step_full1[pos_stepper1++];
+			STEPPERS_PORT = temp;
 		}else{			// CounterClockWise Direction in Full Stepper Mode
 			if(pos_stepper1 < 0) pos_stepper1 = 3;
-			STEPPERS_PORT = (STEPPERS_PORT|0x0F)& step_full1[pos_stepper1--];
+			STEPPERS_PORT = (STEPPERS_PORT|0x0F) & step_full1[pos_stepper1--];
 		}
 	}else{		// Half Stepper Mode
 		if(direction1){	// ClockWise Direction in Half Stepper Mode
@@ -207,9 +213,11 @@ void step_stepper2(){
 //-------------------------------------------------------------------------------------
 // Disable functions (turn-off motors)
 void disable_stepper1(){
-	STEPPERS_PORT &= 0xF0;
+	MAIN_SWITCH		 = 1;		//disables main switch
+	STEPPERS_PORT	&= 0xF0;
 }
 void disable_stepper2(){
-	STEPPERS_PORT &= 0x0F;
+	MAIN_SWITCH		 = 1;		//disables main switch
+	STEPPERS_PORT	&= 0x0F;
 }
 

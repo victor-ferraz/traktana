@@ -1,32 +1,35 @@
-Microchip Technology Inc, vv3_24 (A) ß
+Microchip Technology Inc, vv3_31 (A) _
 
 Tool Name:
-  c:\program files (x86)\microchip\mplab c30\bin\bin\..\bin/pic30-coff-ld.exe
+  c:\program files (x86)\microchip\mplabc30\v3.31\bin\bin\..\bin/pic30-coff-ld.exe
 
 Command:
   -p30F3014 \
   -o./obj\Traktana.cof \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/.. \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../lib \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../support/generic/gld \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/PIC24F \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../support/PIC24F/gld \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/PIC24H \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../support/PIC24H/gld \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC33F \
-  -Lc:/program files (x86)/microchip/mplab c30/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/.. \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/PIC24E \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/PIC24F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/PIC24H \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC33E \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC33F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../support/dsPIC33F/gld \
   tmp\main.o \
   tmp\uart.o \
   tmp\steppers.o \
   tmp\motor_pid.o \
-  E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-coff.a \
-  E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-elf.a \
+  C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-coff.a \
+  C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-elf.a \
   -Tp30F3014.gld.00 \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_PICKIT2=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
   --defsym=__ICD2RAM=1 \
   -Map=./obj\Traktana.map \
   --report-mem \
@@ -38,62 +41,79 @@ Command:
 
 Archive member included because of file (symbol)
 
-E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-coff.a(pid.obj)
+C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-coff.a(pid.obj)
                               tmp\motor_pid.o (PID)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
                               tmp\uart.o (ReadUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
                               tmp\uart.o (DataRdyUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
                               tmp\uart.o (WriteUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
-                              tmp\uart.o (BusyUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
-                              tmp\uart.o (SetDCOC1PWM)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
                               tmp\uart.o (putsUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
+                              tmp\uart.o (BusyUART1)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
                               tmp\uart.o (ConfigIntUART1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
                               tmp\steppers.o (ConfigIntTimer1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
                               tmp\steppers.o (OpenTimer1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
                               tmp\steppers.o (ConfigIntTimer2)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
                               tmp\steppers.o (OpenTimer2)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
                               tmp\motor_pid.o (ReadADC12)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
+                              tmp\motor_pid.o (SetDCOC1PWM)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
                               tmp\motor_pid.o (ConfigIntTimer3)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
                               tmp\motor_pid.o (OpenTimer3)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
                               tmp\motor_pid.o (CloseOC1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
                               tmp\motor_pid.o (ConfigIntOC1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
                               tmp\motor_pid.o (OpenOC1)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
                               (_resetPRI)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(delay32.o)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(delay32.o)
                               tmp\steppers.o (__delay32)
-c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
-                              c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o) (_data_init_standard)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o) (_data_init_standard)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(memcmp.XXo)
+                              tmp\uart.o (memcmp)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(sprintf_cdnopuxX.XXo)
+                              tmp\uart.o (_sprintf_cdnopuxX)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(sprintf_cdnopuxX.XXo) (_vfprintf_cdnopuxX)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo) (fputc)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(_iob.XXo)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo) (_outdone)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(flsbuf.XXo)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo) (_flsbuf)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(write.o)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo) (write)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(c30_uart.o)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(write.o) (__C30_UART)
+c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libm-coff.a(divmoddi3.o)
+                              c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo) (__udivdi3)
 
 
-Program Memory  [Origin = 0x100, Length = 0x3f00]
+Program Memory  [Origin = 0x100, Length = 0x3efe]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x2b0           0x408  (1032)
-.const                       0x3b0                0x44            0x66  (102)
-.text                        0x3f4               0xb26          0x10b9  (4281)
-.dinit                       0xf1a                0x44            0x66  (102)
-.text                        0xf5e                0x32            0x4b  (75)
-.isr                         0xf90                 0x2             0x3  (3)
+.text                        0x100               0xc40          0x1260  (4704)
+.const                       0xd40                0x90            0xd8  (216)
+.text                        0xdd0               0x8ca           0xd2f  (3375)
+.dinit                      0x169a               0x108           0x18c  (396)
+.text                       0x17a2                0xe8           0x15c  (348)
 
-                     Total program memory used (bytes):         0x15db  (5595) 23%
+                     Total program memory used (bytes):         0x234f  (9039) 37%
 
 
 Data Memory  [Origin = 0x800, Length = 0x800]
@@ -103,14 +123,17 @@ section                    address      alignment gaps    total length  (dec)
 .icd                         0x800                0x50            0x50  (80)
 .xbss                        0x850                   0             0x6  (6)
 .nbss                        0x856                   0            0x14  (20)
-.ndata                       0x86a                   0             0xa  (10)
-.nbss                        0x874                   0             0xa  (10)
-.ndata                       0x87e                   0             0x8  (8)
-.nbss                        0x886                   0             0x8  (8)
-.ndata                       0x88e                   0             0x6  (6)
+.ndata                       0x86a                   0            0x14  (20)
+.nbss                        0x87e                   0            0x12  (18)
+.ndata                       0x890                   0             0x6  (6)
+.data                        0x896                   0            0xa0  (160)
+.dconst                      0x936                   0            0x2a  (42)
+.data                        0x960                   0            0x26  (38)
+.bss                         0x986                   0             0x6  (6)
+.data                        0x98c                   0             0x2  (2)
 .ybss                        0xffa                   0             0x6  (6)
 
-                        Total data memory used (bytes):           0x9a  (154) 7%
+                        Total data memory used (bytes):          0x194  (404) 19%
 
 
 Dynamic Memory Usage
@@ -118,177 +141,212 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x894                               0x766  (1894)
+stack                        0x98e                               0x66c  (1644)
 
-                        Maximum dynamic memory (bytes):          0x766  (1894)
+                        Maximum dynamic memory (bytes):          0x66c  (1644)
 
 
 External Symbols in Data Memory (by address):
 
                     0x0850                  _abcCoefficient
                     0x0856                  _buf
-                    0x086a                  _stepper_enable1
-                    0x086b                  _stepper_enable2
-                    0x086c                  _direction1
-                    0x086d                  _direction2
-                    0x086e                  _mode_step1
-                    0x086f                  _mode_step2
-                    0x0870                  _pos_stepper1
-                    0x0872                  _pos_stepper2
-                    0x0874                  _fooPID
-                    0x087e                  _wbufptr
-                    0x0880                  _rbufptr
-                    0x0882                  _bufstt
-                    0x0884                  _cmdissued
-                    0x0886                  _frequency1
-                    0x088a                  _frequency2
-                    0x088e                  _kCoeffs
+                    0x086a                  _wbufptr
+                    0x086c                  _rbufptr
+                    0x086e                  _bufstt
+                    0x0870                  _cmdissued
+                    0x0871                  _cmdblocked
+                    0x0872                  _adc_readout
+                    0x0874                  _stepper_enable1
+                    0x0875                  _stepper_enable2
+                    0x0876                  _direction1
+                    0x0877                  _direction2
+                    0x0878                  _mode_step1
+                    0x0879                  _mode_step2
+                    0x087a                  _pos_stepper1
+                    0x087c                  _pos_stepper2
+                    0x087e                  _fooPID
+                    0x0888                  _frequency1
+                    0x088c                  _frequency2
+                    0x0890                  _kCoeffs
+                    0x0960                  __Files
+                    0x0962                  __iob
+                    0x0986                  __sobuf
+                    0x0988                  __sibuf
+                    0x098a                  __outdone
+                    0x098c                  ___C30_UART
                     0x0ffa                  _controlHistory
 
 External Symbols in Data Memory (by name):
 
+                    0x0960                  __Files
+                    0x098c                  ___C30_UART
+                    0x0962                  __iob
+                    0x098a                  __outdone
+                    0x0988                  __sibuf
+                    0x0986                  __sobuf
                     0x0850                  _abcCoefficient
+                    0x0872                  _adc_readout
                     0x0856                  _buf
-                    0x0882                  _bufstt
-                    0x0884                  _cmdissued
+                    0x086e                  _bufstt
+                    0x0871                  _cmdblocked
+                    0x0870                  _cmdissued
                     0x0ffa                  _controlHistory
-                    0x086c                  _direction1
-                    0x086d                  _direction2
-                    0x0874                  _fooPID
-                    0x0886                  _frequency1
-                    0x088a                  _frequency2
-                    0x088e                  _kCoeffs
-                    0x086e                  _mode_step1
-                    0x086f                  _mode_step2
-                    0x0870                  _pos_stepper1
-                    0x0872                  _pos_stepper2
-                    0x0880                  _rbufptr
-                    0x086a                  _stepper_enable1
-                    0x086b                  _stepper_enable2
-                    0x087e                  _wbufptr
+                    0x0876                  _direction1
+                    0x0877                  _direction2
+                    0x087e                  _fooPID
+                    0x0888                  _frequency1
+                    0x088c                  _frequency2
+                    0x0890                  _kCoeffs
+                    0x0878                  _mode_step1
+                    0x0879                  _mode_step2
+                    0x087a                  _pos_stepper1
+                    0x087c                  _pos_stepper2
+                    0x086c                  _rbufptr
+                    0x0874                  _stepper_enable1
+                    0x0875                  _stepper_enable2
+                    0x086a                  _wbufptr
 
 External Symbols in Program Memory (by address):
 
                   0x000100                  __resetPRI
                   0x000122                  __psv_init
-                  0x000132                  __data_init
-                  0x000132                  __data_init_standard
-                  0x000190                  _PID
-                  0x0001c8                  _PIDInit
-                  0x0001de                  _PIDCoeffCalc
-                  0x000202                  _ReadUART1
-                  0x000214                  _DataRdyUART1
-                  0x00021a                  _WriteUART1
-                  0x00022a                  _BusyUART1
-                  0x000232                  _SetDCOC1PWM
-                  0x000246                  _putsUART1
-                  0x00027a                  _ConfigIntUART1
-                  0x0002d0                  _ConfigIntTimer1
-                  0x0002fa                  _OpenTimer1
-                  0x000302                  _ConfigIntTimer2
-                  0x00032a                  _OpenTimer2
-                  0x000334                  _ReadADC12
-                  0x00033e                  _ConfigIntTimer3
-                  0x000368                  _OpenTimer3
-                  0x000370                  _CloseOC1
-                  0x00037a                  _ConfigIntOC1
-                  0x0003a2                  _OpenOC1
-                  0x0003dc                  _step_full1
-                  0x0003e0                  _step_half1
-                  0x0003e8                  _step_full2
-                  0x0003ec                  _step_half2
-                  0x0003f4                  __U1RXInterrupt
-                  0x00043a                  _loopback_UART
-                  0x0004ca                  _ato88
-                  0x0005ec                  _process_cmd
-                  0x000a5c                  _Init_UART
-                  0x000a74                  __T1Interrupt
-                  0x000a98                  __T2Interrupt
-                  0x000ab6                  _Init_Steppers
-                  0x000adc                  _rotate_stepper1
-                  0x000be8                  _rotate_stepper2
-                  0x000cf4                  _step_stepper1
-                  0x000d9a                  _step_stepper2
-                  0x000e40                  _disable_stepper1
-                  0x000e4e                  _disable_stepper2
-                  0x000e5a                  __ADCInterrupt
-                  0x000e88                  _Motor_PID_Init
-                  0x000f5e                  ___delay32
-                  0x000f7a                  _main
-                  0x000f84                  _InitDevice
-                  0x000f90                  __DefaultInterrupt
+                  0x000132                  ___delay32
+                  0x00014e                  __data_init
+                  0x00014e                  __data_init_standard
+                  0x0001ac                  __DefaultInterrupt
+                  0x000244                  ___udivmoddi3
+                  0x000312                  ___udivdi3
+                  0x000320                  ___umoddi3
+                  0x000328                  ___divdi3
+                  0x000362                  ___moddi3
+                  0x000434                  _PID
+                  0x00046c                  _PIDInit
+                  0x000482                  _PIDCoeffCalc
+                  0x0004a6                  _ReadUART1
+                  0x0004b8                  _DataRdyUART1
+                  0x0004be                  _WriteUART1
+                  0x0004ce                  _putsUART1
+                  0x000502                  _BusyUART1
+                  0x00050a                  _ConfigIntUART1
+                  0x000560                  _ConfigIntTimer1
+                  0x00058a                  _OpenTimer1
+                  0x000592                  _ConfigIntTimer2
+                  0x0005ba                  _OpenTimer2
+                  0x0005c4                  _ReadADC12
+                  0x0005ce                  _SetDCOC1PWM
+                  0x0005e2                  _ConfigIntTimer3
+                  0x00060c                  _OpenTimer3
+                  0x000614                  _CloseOC1
+                  0x000622                  _ConfigIntOC1
+                  0x00064a                  _OpenOC1
+                  0x000660                  _memcmp
+                  0x000694                  __sprintf_cdnopuxX
+                  0x0006c2                  __vfprintf_cdnopuxX
+                  0x000db8                  _step_full1
+                  0x000dbc                  _step_half1
+                  0x000dc4                  _step_full2
+                  0x000dc8                  _step_half2
+                  0x000dd0                  __U1RXInterrupt
+                  0x000e16                  _loopback_UART
+                  0x000ee4                  _ato88
+                  0x001006                  _process_cmd
+                  0x00128e                  _echo_UART
+                  0x0012b2                  _Init_UART
+                  0x0012ca                  __T1Interrupt
+                  0x0012ee                  __T2Interrupt
+                  0x00130c                  _Init_Steppers
+                  0x001334                  _rotate_stepper1
+                  0x001438                  _rotate_stepper2
+                  0x00153c                  _step_stepper1
+                  0x0015de                  _step_stepper2
+                  0x00167c                  _disable_stepper1
+                  0x00168c                  _disable_stepper2
+                  0x0017a2                  __ADCInterrupt
+                  0x0017d0                  _Motor_PID_Init
+                  0x001872                  _main
+                  0x00187e                  _InitDevice
 
 External Symbols in Program Memory (by name):
 
-                  0x00022a                  _BusyUART1
-                  0x000370                  _CloseOC1
-                  0x00037a                  _ConfigIntOC1
-                  0x0002d0                  _ConfigIntTimer1
-                  0x000302                  _ConfigIntTimer2
-                  0x00033e                  _ConfigIntTimer3
-                  0x00027a                  _ConfigIntUART1
-                  0x000214                  _DataRdyUART1
-                  0x000f84                  _InitDevice
-                  0x000ab6                  _Init_Steppers
-                  0x000a5c                  _Init_UART
-                  0x000e88                  _Motor_PID_Init
-                  0x0003a2                  _OpenOC1
-                  0x0002fa                  _OpenTimer1
-                  0x00032a                  _OpenTimer2
-                  0x000368                  _OpenTimer3
-                  0x000190                  _PID
-                  0x0001de                  _PIDCoeffCalc
-                  0x0001c8                  _PIDInit
-                  0x000334                  _ReadADC12
-                  0x000202                  _ReadUART1
-                  0x000232                  _SetDCOC1PWM
-                  0x00021a                  _WriteUART1
-                  0x000e5a                  __ADCInterrupt
-                  0x000f90                  __DefaultInterrupt
-                  0x000a74                  __T1Interrupt
-                  0x000a98                  __T2Interrupt
-                  0x0003f4                  __U1RXInterrupt
-                  0x000f5e                  ___delay32
-                  0x000132                  __data_init
-                  0x000132                  __data_init_standard
+                  0x000502                  _BusyUART1
+                  0x000614                  _CloseOC1
+                  0x000622                  _ConfigIntOC1
+                  0x000560                  _ConfigIntTimer1
+                  0x000592                  _ConfigIntTimer2
+                  0x0005e2                  _ConfigIntTimer3
+                  0x00050a                  _ConfigIntUART1
+                  0x0004b8                  _DataRdyUART1
+                  0x00187e                  _InitDevice
+                  0x00130c                  _Init_Steppers
+                  0x0012b2                  _Init_UART
+                  0x0017d0                  _Motor_PID_Init
+                  0x00064a                  _OpenOC1
+                  0x00058a                  _OpenTimer1
+                  0x0005ba                  _OpenTimer2
+                  0x00060c                  _OpenTimer3
+                  0x000434                  _PID
+                  0x000482                  _PIDCoeffCalc
+                  0x00046c                  _PIDInit
+                  0x0005c4                  _ReadADC12
+                  0x0004a6                  _ReadUART1
+                  0x0005ce                  _SetDCOC1PWM
+                  0x0004be                  _WriteUART1
+                  0x0017a2                  __ADCInterrupt
+                  0x0001ac                  __DefaultInterrupt
+                  0x0012ca                  __T1Interrupt
+                  0x0012ee                  __T2Interrupt
+                  0x000dd0                  __U1RXInterrupt
+                  0x000132                  ___delay32
+                  0x000328                  ___divdi3
+                  0x000362                  ___moddi3
+                  0x000312                  ___udivdi3
+                  0x000244                  ___udivmoddi3
+                  0x000320                  ___umoddi3
+                  0x00014e                  __data_init
+                  0x00014e                  __data_init_standard
                   0x000122                  __psv_init
                   0x000100                  __resetPRI
-                  0x0004ca                  _ato88
-                  0x000e40                  _disable_stepper1
-                  0x000e4e                  _disable_stepper2
-                  0x00043a                  _loopback_UART
-                  0x000f7a                  _main
-                  0x0005ec                  _process_cmd
-                  0x000246                  _putsUART1
-                  0x000adc                  _rotate_stepper1
-                  0x000be8                  _rotate_stepper2
-                  0x0003dc                  _step_full1
-                  0x0003e8                  _step_full2
-                  0x0003e0                  _step_half1
-                  0x0003ec                  _step_half2
-                  0x000cf4                  _step_stepper1
-                  0x000d9a                  _step_stepper2
+                  0x000694                  __sprintf_cdnopuxX
+                  0x0006c2                  __vfprintf_cdnopuxX
+                  0x000ee4                  _ato88
+                  0x00167c                  _disable_stepper1
+                  0x00168c                  _disable_stepper2
+                  0x00128e                  _echo_UART
+                  0x000e16                  _loopback_UART
+                  0x001872                  _main
+                  0x000660                  _memcmp
+                  0x001006                  _process_cmd
+                  0x0004ce                  _putsUART1
+                  0x001334                  _rotate_stepper1
+                  0x001438                  _rotate_stepper2
+                  0x000db8                  _step_full1
+                  0x000dc4                  _step_full2
+                  0x000dbc                  _step_half1
+                  0x000dc8                  _step_half2
+                  0x00153c                  _step_stepper1
+                  0x0015de                  _step_stepper2
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
 data             0x000800           0x000800           a !xr
-program          0x000100           0x003f00           xr
 reset            0x000000           0x000004  
 ivt              0x000004           0x00007c  
+_reserved        0x000080           0x000004  
 aivt             0x000084           0x00007c  
-__FOSC           0xf80000           0x000002  
-__FWDT           0xf80002           0x000002  
-__FBORPOR        0xf80004           0x000002  
-__CONFIG4        0xf80006           0x000002  
-__CONFIG5        0xf80008           0x000002  
-__FGS            0xf8000a           0x000002  
-__FICD           0xf8000c           0x000002  
-__FUID0          0x8005c0           0x000002  
-__FUID1          0x8005c2           0x000002  
-__FUID2          0x8005c4           0x000002  
-__FUID3          0x8005c6           0x000002  
+program          0x000100           0x003efe           xr
 eedata           0x7ffc00           0x000400  
+FUID0            0x8005c0           0x000002  
+FUID1            0x8005c2           0x000002  
+FUID2            0x8005c4           0x000002  
+FUID3            0x8005c6           0x000002  
+FOSC             0xf80000           0x000002  
+FWDT             0xf80002           0x000002  
+FBORPOR          0xf80004           0x000002  
+RESERVED1        0xf80006           0x000002  
+RESERVED2        0xf80008           0x000002  
+FGS              0xf8000a           0x000002  
+FICD             0xf8000c           0x000002  
 *default*        0x000000           0xffffffff  
 
 Linker script and memory map
@@ -297,124 +355,149 @@ LOAD tmp\main.o
 LOAD tmp\uart.o
 LOAD tmp\steppers.o
 LOAD tmp\motor_pid.o
-LOAD E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-coff.a
-LOAD E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-elf.a
-LOAD c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a
-                    0x0001                  __NO_HANDLES = 0x1
-                    0xf80000                  __FOSC = 0xf80000
-                    0xf80002                  __FWDT = 0xf80002
-                    0xf80004                  __FBORPOR = 0xf80004
-                    0xf80006                  __CONFIG4 = 0xf80006
-                    0xf80008                  __CONFIG5 = 0xf80008
-                    0xf8000a                  __FGS = 0xf8000a
-                    0xf8000c                  __FICD = 0xf8000c
+LOAD C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-coff.a
+LOAD C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-elf.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a
                     0x8005c0                  __FUID0 = 0x8005c0
                     0x8005c2                  __FUID1 = 0x8005c2
                     0x8005c4                  __FUID2 = 0x8005c4
                     0x8005c6                  __FUID3 = 0x8005c6
-                    0x0000                  __RESET_BASE = 0x0
+                    0xf80000                  __FOSC = 0xf80000
+                    0xf80002                  __FWDT = 0xf80002
+                    0xf80004                  __FBORPOR = 0xf80004
+                    0xf80006                  __RESERVED1 = 0xf80006
+                    0xf80008                  __RESERVED2 = 0xf80008
+                    0xf8000a                  __FGS = 0xf8000a
+                    0xf8000c                  __FICD = 0xf8000c
+                    0x0001                  __NO_HANDLES = 0x1
                     0x0004                  __IVT_BASE = 0x4
                     0x0084                  __AIVT_BASE = 0x84
-                    0x0100                  __CODE_BASE = 0x100
-                    0x0000                  __SFR_BASE = 0x0
                     0x0800                  __DATA_BASE = 0x800
+                    0x0800                  __DATA_LENGTH = 0x800
                     0x0c00                  __YDATA_BASE = 0xc00
+                    0x0100                  __CODE_BASE = 0x100
+                    0x3f00                  __CODE_LENGTH = 0x3f00
 
 .reset            0x000000          0x4
-                  0x000000          0x2 SHORT 0x100 <code 339> (__reset)
+                  0x000000          0x2 SHORT 0x100 ABSOLUTE (__reset)
                   0x000001          0x2 SHORT 0x4
-                  0x000002          0x2 SHORT 0x0 ((<code 339> (__reset) >> 0x10) & 0x7f)
+                  0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x2b0
+.text             0x000100        0xc40
  *(.init)
- .init            0x000100         0x32 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+ .init            0x000100         0x32 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
                   0x000100                  _resetPRI
                   0x000100                  _reset
                   0x000122                  _psv_init
- .init            0x000132         0x5e c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
-                  0x000132                  _data_init_standard
-                  0x000132                  _data_init
+ .init            0x000132         0x1c c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(delay32.o)
+                  0x000132                  __delay32
+ .init            0x00014e         0x5e c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+                  0x00014e                  _data_init_standard
+                  0x00014e                  _data_init
  *(.user_init)
  *(.handle)
+ *(.isr*)
+ .isr             0x0001ac          0x4 default_isr
+                  0x0001ac                  _DefaultInterrupt
  *(.libc)
+ .libc            0x0001b0         0x6e c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(write.o)
+                  0x0001b0                  write
  *(.libm)
+ .libm            0x00021e        0x216 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libm-coff.a(divmoddi3.o)
+                  0x000244                  __udivmoddi3
+                  0x000312                  __udivdi3
+                  0x000320                  __umoddi3
+                  0x000328                  __divdi3
+                  0x000362                  __moddi3
  *(.libdsp)
- .libdsp          0x000190         0x72 E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-coff.a(pid.obj)
-                  0x000190                  PID
-                  0x0001c8                  PIDInit
-                  0x0001de                  PIDCoeffCalc
+ .libdsp          0x000434         0x72 C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-coff.a(pid.obj)
+                  0x000434                  PID
+                  0x00046c                  PIDInit
+                  0x000482                  PIDCoeffCalc
  *(.lib*)
- .libperi         0x000202         0x12 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
-                  0x000202                  ReadUART1
- .libperi         0x000214          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
-                  0x000214                  DataRdyUART1
- .libperi         0x00021a         0x10 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
-                  0x00021a                  WriteUART1
- .libperi         0x00022a          0x8 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
-                  0x00022a                  BusyUART1
- .libperi         0x000232         0x14 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
-                  0x000232                  SetDCOC1PWM
- .libperi         0x000246         0x34 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
-                  0x000246                  putsUART1
- .libperi         0x00027a         0x56 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
-                  0x00027a                  ConfigIntUART1
- .libperi         0x0002d0         0x2a c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
-                  0x0002d0                  ConfigIntTimer1
- .libperi         0x0002fa          0x8 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
-                  0x0002fa                  OpenTimer1
- .libperi         0x000302         0x28 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
-                  0x000302                  ConfigIntTimer2
- .libperi         0x00032a          0xa c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
-                  0x00032a                  OpenTimer2
- .libperi         0x000334          0xa c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
-                  0x000334                  ReadADC12
- .libperi         0x00033e         0x2a c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
-                  0x00033e                  ConfigIntTimer3
- .libperi         0x000368          0x8 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
-                  0x000368                  OpenTimer3
- .libperi         0x000370          0xa c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
-                  0x000370                  CloseOC1
- .libperi         0x00037a         0x28 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
-                  0x00037a                  ConfigIntOC1
- .libperi         0x0003a2          0xe c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
-                  0x0003a2                  OpenOC1
+ .libperi         0x0004a6         0x12 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
+                  0x0004a6                  ReadUART1
+ .libperi         0x0004b8          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
+                  0x0004b8                  DataRdyUART1
+ .libperi         0x0004be         0x10 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
+                  0x0004be                  WriteUART1
+ .libperi         0x0004ce         0x34 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
+                  0x0004ce                  putsUART1
+ .libperi         0x000502          0x8 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
+                  0x000502                  BusyUART1
+ .libperi         0x00050a         0x56 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
+                  0x00050a                  ConfigIntUART1
+ .libperi         0x000560         0x2a c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
+                  0x000560                  ConfigIntTimer1
+ .libperi         0x00058a          0x8 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
+                  0x00058a                  OpenTimer1
+ .libperi         0x000592         0x28 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
+                  0x000592                  ConfigIntTimer2
+ .libperi         0x0005ba          0xa c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
+                  0x0005ba                  OpenTimer2
+ .libperi         0x0005c4          0xa c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
+                  0x0005c4                  ReadADC12
+ .libperi         0x0005ce         0x14 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
+                  0x0005ce                  SetDCOC1PWM
+ .libperi         0x0005e2         0x2a c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
+                  0x0005e2                  ConfigIntTimer3
+ .libperi         0x00060c          0x8 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
+                  0x00060c                  OpenTimer3
+ .libperi         0x000614          0xe c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
+                  0x000614                  CloseOC1
+ .libperi         0x000622         0x28 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
+                  0x000622                  ConfigIntOC1
+ .libperi         0x00064a         0x16 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
+                  0x00064a                  OpenOC1
+ .libc.memcmp     0x000660         0x34 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(memcmp.XXo)
+                  0x000660                  memcmp
+ .libc._sprintf_cdnopuxX
+                  0x000694         0x2e c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(sprintf_cdnopuxX.XXo)
+                  0x000694                  _sprintf_cdnopuxX
+ .libc._vfprintf_cdnopuxX
+                  0x0006c2        0x56a c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo)
+                  0x0006c2                  _vfprintf_cdnopuxX
+ .libc.fputc      0x000c2c         0x8e c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo)
+                  0x000c2c                  fputc
+ .libc._flsbuf    0x000cba         0x86 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(flsbuf.XXo)
+                  0x000cba                  _flsbuf
 
 usercode
  *(usercode)
 
-__FOSC
- *(__FOSC.sec)
-
-__FWDT
- *(__FWDT.sec)
-
-__FBORPOR
- *(__FBORPOR.sec)
-
-__CONFIG4
- *(__CONFIG4.sec)
-
-__CONFIG5
- *(__CONFIG5.sec)
-
-__FGS
- *(__FGS.sec)
-
-__FICD
- *(__FICD.sec)
-
 __FUID0
- *(__FUID0.sec)
+ *(__FUID0.sec*)
 
 __FUID1
- *(__FUID1.sec)
+ *(__FUID1.sec*)
 
 __FUID2
- *(__FUID2.sec)
+ *(__FUID2.sec*)
 
 __FUID3
- *(__FUID3.sec)
+ *(__FUID3.sec*)
+
+__FOSC
+ *(__FOSC.sec*)
+
+__FWDT
+ *(__FWDT.sec*)
+
+__FBORPOR
+ *(__FBORPOR.sec*)
+
+__RESERVED1
+ *(__RESERVED1.sec*)
+
+__RESERVED2
+ *(__RESERVED2.sec*)
+
+__FGS
+ *(__FGS.sec*)
+
+__FICD
+ *(__FICD.sec*)
 
 user_eedata
  *(user_eedata)
@@ -461,132 +544,132 @@ userdata
  *(.debug_aranges)
 
 .ivt              0x000004         0x7c
-                  0x000004          0x4 LONG 0xf90 DEFINED (__ReservedTrap0)?<code 339> (__ReservedTrap0):<code 339> (__DefaultInterrupt)
-                  0x000006          0x4 LONG 0xf90 DEFINED (__OscillatorFail)?<code 339> (__OscillatorFail):<code 339> (__DefaultInterrupt)
-                  0x000008          0x4 LONG 0xf90 DEFINED (__AddressError)?<code 339> (__AddressError):<code 339> (__DefaultInterrupt)
-                  0x00000a          0x4 LONG 0xf90 DEFINED (__StackError)?<code 339> (__StackError):<code 339> (__DefaultInterrupt)
-                  0x00000c          0x4 LONG 0xf90 DEFINED (__MathError)?<code 339> (__MathError):<code 339> (__DefaultInterrupt)
-                  0x00000e          0x4 LONG 0xf90 DEFINED (__ReservedTrap5)?<code 339> (__ReservedTrap5):<code 339> (__DefaultInterrupt)
-                  0x000010          0x4 LONG 0xf90 DEFINED (__ReservedTrap6)?<code 339> (__ReservedTrap6):<code 339> (__DefaultInterrupt)
-                  0x000012          0x4 LONG 0xf90 DEFINED (__ReservedTrap7)?<code 339> (__ReservedTrap7):<code 339> (__DefaultInterrupt)
-                  0x000014          0x4 LONG 0xf90 DEFINED (__INT0Interrupt)?<code 339> (__INT0Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000016          0x4 LONG 0xf90 DEFINED (__IC1Interrupt)?<code 339> (__IC1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000018          0x4 LONG 0xf90 DEFINED (__OC1Interrupt)?<code 339> (__OC1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00001a          0x4 LONG 0xa74 DEFINED (__T1Interrupt)?<code 339> (__T1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00001c          0x4 LONG 0xf90 DEFINED (__IC2Interrupt)?<code 339> (__IC2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00001e          0x4 LONG 0xf90 DEFINED (__OC2Interrupt)?<code 339> (__OC2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000020          0x4 LONG 0xa98 DEFINED (__T2Interrupt)?<code 339> (__T2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000022          0x4 LONG 0xf90 DEFINED (__T3Interrupt)?<code 339> (__T3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000024          0x4 LONG 0xf90 DEFINED (__SPI1Interrupt)?<code 339> (__SPI1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000026          0x4 LONG 0x3f4 DEFINED (__U1RXInterrupt)?<code 339> (__U1RXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000028          0x4 LONG 0xf90 DEFINED (__U1TXInterrupt)?<code 339> (__U1TXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00002a          0x4 LONG 0xe5a DEFINED (__ADCInterrupt)?<code 339> (__ADCInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00002c          0x4 LONG 0xf90 DEFINED (__NVMInterrupt)?<code 339> (__NVMInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00002e          0x4 LONG 0xf90 DEFINED (__SI2CInterrupt)?<code 339> (__SI2CInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000030          0x4 LONG 0xf90 DEFINED (__MI2CInterrupt)?<code 339> (__MI2CInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000032          0x4 LONG 0xf90 DEFINED (__CNInterrupt)?<code 339> (__CNInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000034          0x4 LONG 0xf90 DEFINED (__INT1Interrupt)?<code 339> (__INT1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000036          0x4 LONG 0xf90 DEFINED (__IC7Interrupt)?<code 339> (__IC7Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000038          0x4 LONG 0xf90 DEFINED (__IC8Interrupt)?<code 339> (__IC8Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00003a          0x4 LONG 0xf90 DEFINED (__OC3Interrupt)?<code 339> (__OC3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00003c          0x4 LONG 0xf90 DEFINED (__OC4Interrupt)?<code 339> (__OC4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00003e          0x4 LONG 0xf90 DEFINED (__T4Interrupt)?<code 339> (__T4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000040          0x4 LONG 0xf90 DEFINED (__T5Interrupt)?<code 339> (__T5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000042          0x4 LONG 0xf90 DEFINED (__INT2Interrupt)?<code 339> (__INT2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000044          0x4 LONG 0xf90 DEFINED (__U2RXInterrupt)?<code 339> (__U2RXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000046          0x4 LONG 0xf90 DEFINED (__U2TXInterrupt)?<code 339> (__U2TXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000048          0x4 LONG 0xf90 DEFINED (__SPI2Interrupt)?<code 339> (__SPI2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00004a          0x4 LONG 0xf90 DEFINED (__C1Interrupt)?<code 339> (__C1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00004c          0x4 LONG 0xf90 DEFINED (__IC3Interrupt)?<code 339> (__IC3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00004e          0x4 LONG 0xf90 DEFINED (__IC4Interrupt)?<code 339> (__IC4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000050          0x4 LONG 0xf90 DEFINED (__IC5Interrupt)?<code 339> (__IC5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000052          0x4 LONG 0xf90 DEFINED (__IC6Interrupt)?<code 339> (__IC6Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000054          0x4 LONG 0xf90 DEFINED (__OC5Interrupt)?<code 339> (__OC5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000056          0x4 LONG 0xf90 DEFINED (__OC6Interrupt)?<code 339> (__OC6Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000058          0x4 LONG 0xf90 DEFINED (__OC7Interrupt)?<code 339> (__OC7Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00005a          0x4 LONG 0xf90 DEFINED (__OC8Interrupt)?<code 339> (__OC8Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00005c          0x4 LONG 0xf90 DEFINED (__INT3Interrupt)?<code 339> (__INT3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00005e          0x4 LONG 0xf90 DEFINED (__INT4Interrupt)?<code 339> (__INT4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000060          0x4 LONG 0xf90 DEFINED (__C2Interrupt)?<code 339> (__C2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000062          0x4 LONG 0xf90 DEFINED (__PWMInterrupt)?<code 339> (__PWMInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000064          0x4 LONG 0xf90 DEFINED (__QEIInterrupt)?<code 339> (__QEIInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000066          0x4 LONG 0xf90 DEFINED (__DCIInterrupt)?<code 339> (__DCIInterrupt):<code 339> (__DefaultInterrupt)
-                  0x000068          0x4 LONG 0xf90 DEFINED (__LVDInterrupt)?<code 339> (__LVDInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00006a          0x4 LONG 0xf90 DEFINED (__FLTAInterrupt)?<code 339> (__FLTAInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00006c          0x4 LONG 0xf90 DEFINED (__FLTBInterrupt)?<code 339> (__FLTBInterrupt):<code 339> (__DefaultInterrupt)
-                  0x00006e          0x4 LONG 0xf90 DEFINED (__Interrupt45)?<code 339> (__Interrupt45):<code 339> (__DefaultInterrupt)
-                  0x000070          0x4 LONG 0xf90 DEFINED (__Interrupt46)?<code 339> (__Interrupt46):<code 339> (__DefaultInterrupt)
-                  0x000072          0x4 LONG 0xf90 DEFINED (__Interrupt47)?<code 339> (__Interrupt47):<code 339> (__DefaultInterrupt)
-                  0x000074          0x4 LONG 0xf90 DEFINED (__Interrupt48)?<code 339> (__Interrupt48):<code 339> (__DefaultInterrupt)
-                  0x000076          0x4 LONG 0xf90 DEFINED (__Interrupt49)?<code 339> (__Interrupt49):<code 339> (__DefaultInterrupt)
-                  0x000078          0x4 LONG 0xf90 DEFINED (__Interrupt50)?<code 339> (__Interrupt50):<code 339> (__DefaultInterrupt)
-                  0x00007a          0x4 LONG 0xf90 DEFINED (__Interrupt51)?<code 339> (__Interrupt51):<code 339> (__DefaultInterrupt)
-                  0x00007c          0x4 LONG 0xf90 DEFINED (__Interrupt52)?<code 339> (__Interrupt52):<code 339> (__DefaultInterrupt)
-                  0x00007e          0x4 LONG 0xf90 DEFINED (__Interrupt53)?<code 339> (__Interrupt53):<code 339> (__DefaultInterrupt)
+                  0x000004          0x4 LONG 0x1ac DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000006          0x4 LONG 0x1ac DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000008          0x4 LONG 0x1ac DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000a          0x4 LONG 0x1ac DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000c          0x4 LONG 0x1ac DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000e          0x4 LONG 0x1ac DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000010          0x4 LONG 0x1ac DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000012          0x4 LONG 0x1ac DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000014          0x4 LONG 0x1ac DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000016          0x4 LONG 0x1ac DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000018          0x4 LONG 0x1ac DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x12ca DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x1ac DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001e          0x4 LONG 0x1ac DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000020          0x4 LONG 0x12ee DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000022          0x4 LONG 0x1ac DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000024          0x4 LONG 0x1ac DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000026          0x4 LONG 0xdd0 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000028          0x4 LONG 0x1ac DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x17a2 DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x1ac DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002e          0x4 LONG 0x1ac DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000030          0x4 LONG 0x1ac DEFINED (__MI2CInterrupt)?ABSOLUTE (__MI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000032          0x4 LONG 0x1ac DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000034          0x4 LONG 0x1ac DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000036          0x4 LONG 0x1ac DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000038          0x4 LONG 0x1ac DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003a          0x4 LONG 0x1ac DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003c          0x4 LONG 0x1ac DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003e          0x4 LONG 0x1ac DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000040          0x4 LONG 0x1ac DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000042          0x4 LONG 0x1ac DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000044          0x4 LONG 0x1ac DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000046          0x4 LONG 0x1ac DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000048          0x4 LONG 0x1ac DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004a          0x4 LONG 0x1ac DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004c          0x4 LONG 0x1ac DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004e          0x4 LONG 0x1ac DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000050          0x4 LONG 0x1ac DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000052          0x4 LONG 0x1ac DEFINED (__IC6Interrupt)?ABSOLUTE (__IC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000054          0x4 LONG 0x1ac DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000056          0x4 LONG 0x1ac DEFINED (__OC6Interrupt)?ABSOLUTE (__OC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000058          0x4 LONG 0x1ac DEFINED (__OC7Interrupt)?ABSOLUTE (__OC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005a          0x4 LONG 0x1ac DEFINED (__OC8Interrupt)?ABSOLUTE (__OC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005c          0x4 LONG 0x1ac DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005e          0x4 LONG 0x1ac DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000060          0x4 LONG 0x1ac DEFINED (__C2Interrupt)?ABSOLUTE (__C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000062          0x4 LONG 0x1ac DEFINED (__PWMInterrupt)?ABSOLUTE (__PWMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000064          0x4 LONG 0x1ac DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000066          0x4 LONG 0x1ac DEFINED (__DCIInterrupt)?ABSOLUTE (__DCIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000068          0x4 LONG 0x1ac DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006a          0x4 LONG 0x1ac DEFINED (__FLTAInterrupt)?ABSOLUTE (__FLTAInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006c          0x4 LONG 0x1ac DEFINED (__FLTBInterrupt)?ABSOLUTE (__FLTBInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006e          0x4 LONG 0x1ac DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x000070          0x4 LONG 0x1ac DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x000072          0x4 LONG 0x1ac DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x000074          0x4 LONG 0x1ac DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x000076          0x4 LONG 0x1ac DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x000078          0x4 LONG 0x1ac DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x00007a          0x4 LONG 0x1ac DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x00007c          0x4 LONG 0x1ac DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x00007e          0x4 LONG 0x1ac DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
 
 .aivt             0x000084         0x7c
-                  0x000084          0x4 LONG 0xf90 DEFINED (__AltReservedTrap0)?<code 339> (__AltReservedTrap0):DEFINED (__ReservedTrap0)?<code 339> (__ReservedTrap0):<code 339> (__DefaultInterrupt)
-                  0x000086          0x4 LONG 0xf90 DEFINED (__AltOscillatorFail)?<code 339> (__AltOscillatorFail):DEFINED (__OscillatorFail)?<code 339> (__OscillatorFail):<code 339> (__DefaultInterrupt)
-                  0x000088          0x4 LONG 0xf90 DEFINED (__AltAddressError)?<code 339> (__AltAddressError):DEFINED (__AddressError)?<code 339> (__AddressError):<code 339> (__DefaultInterrupt)
-                  0x00008a          0x4 LONG 0xf90 DEFINED (__AltStackError)?<code 339> (__AltStackError):DEFINED (__StackError)?<code 339> (__StackError):<code 339> (__DefaultInterrupt)
-                  0x00008c          0x4 LONG 0xf90 DEFINED (__AltMathError)?<code 339> (__AltMathError):DEFINED (__MathError)?<code 339> (__MathError):<code 339> (__DefaultInterrupt)
-                  0x00008e          0x4 LONG 0xf90 DEFINED (__AltReservedTrap5)?<code 339> (__AltReservedTrap5):DEFINED (__ReservedTrap5)?<code 339> (__ReservedTrap5):<code 339> (__DefaultInterrupt)
-                  0x000090          0x4 LONG 0xf90 DEFINED (__AltReservedTrap6)?<code 339> (__AltReservedTrap6):DEFINED (__ReservedTrap6)?<code 339> (__ReservedTrap6):<code 339> (__DefaultInterrupt)
-                  0x000092          0x4 LONG 0xf90 DEFINED (__AltReservedTrap7)?<code 339> (__AltReservedTrap7):DEFINED (__ReservedTrap7)?<code 339> (__ReservedTrap7):<code 339> (__DefaultInterrupt)
-                  0x000094          0x4 LONG 0xf90 DEFINED (__AltINT0Interrupt)?<code 339> (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?<code 339> (__INT0Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000096          0x4 LONG 0xf90 DEFINED (__AltIC1Interrupt)?<code 339> (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?<code 339> (__IC1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x000098          0x4 LONG 0xf90 DEFINED (__AltOC1Interrupt)?<code 339> (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?<code 339> (__OC1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00009a          0x4 LONG 0xa74 DEFINED (__AltT1Interrupt)?<code 339> (__AltT1Interrupt):DEFINED (__T1Interrupt)?<code 339> (__T1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00009c          0x4 LONG 0xf90 DEFINED (__AltIC2Interrupt)?<code 339> (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?<code 339> (__IC2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x00009e          0x4 LONG 0xf90 DEFINED (__AltOC2Interrupt)?<code 339> (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?<code 339> (__OC2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000a0          0x4 LONG 0xa98 DEFINED (__AltT2Interrupt)?<code 339> (__AltT2Interrupt):DEFINED (__T2Interrupt)?<code 339> (__T2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000a2          0x4 LONG 0xf90 DEFINED (__AltT3Interrupt)?<code 339> (__AltT3Interrupt):DEFINED (__T3Interrupt)?<code 339> (__T3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000a4          0x4 LONG 0xf90 DEFINED (__AltSPI1Interrupt)?<code 339> (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?<code 339> (__SPI1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000a6          0x4 LONG 0x3f4 DEFINED (__AltU1RXInterrupt)?<code 339> (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?<code 339> (__U1RXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000a8          0x4 LONG 0xf90 DEFINED (__AltU1TXInterrupt)?<code 339> (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?<code 339> (__U1TXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000aa          0x4 LONG 0xe5a DEFINED (__AltADCInterrupt)?<code 339> (__AltADCInterrupt):DEFINED (__ADCInterrupt)?<code 339> (__ADCInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ac          0x4 LONG 0xf90 DEFINED (__AltNVMInterrupt)?<code 339> (__AltNVMInterrupt):DEFINED (__NVMInterrupt)?<code 339> (__NVMInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ae          0x4 LONG 0xf90 DEFINED (__AltSI2CInterrupt)?<code 339> (__AltSI2CInterrupt):DEFINED (__SI2CInterrupt)?<code 339> (__SI2CInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000b0          0x4 LONG 0xf90 DEFINED (__AltMI2CInterrupt)?<code 339> (__AltMI2CInterrupt):DEFINED (__MI2CInterrupt)?<code 339> (__MI2CInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000b2          0x4 LONG 0xf90 DEFINED (__AltCNInterrupt)?<code 339> (__AltCNInterrupt):DEFINED (__CNInterrupt)?<code 339> (__CNInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000b4          0x4 LONG 0xf90 DEFINED (__AltINT1Interrupt)?<code 339> (__AltINT1Interrupt):DEFINED (__INT1Interrupt)?<code 339> (__INT1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000b6          0x4 LONG 0xf90 DEFINED (__AltIC7Interrupt)?<code 339> (__AltIC7Interrupt):DEFINED (__IC7Interrupt)?<code 339> (__IC7Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000b8          0x4 LONG 0xf90 DEFINED (__AltIC8Interrupt)?<code 339> (__AltIC8Interrupt):DEFINED (__IC8Interrupt)?<code 339> (__IC8Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ba          0x4 LONG 0xf90 DEFINED (__AltOC3Interrupt)?<code 339> (__AltOC3Interrupt):DEFINED (__OC3Interrupt)?<code 339> (__OC3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000bc          0x4 LONG 0xf90 DEFINED (__AltOC4Interrupt)?<code 339> (__AltOC4Interrupt):DEFINED (__OC4Interrupt)?<code 339> (__OC4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000be          0x4 LONG 0xf90 DEFINED (__AltT4Interrupt)?<code 339> (__AltT4Interrupt):DEFINED (__T4Interrupt)?<code 339> (__T4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000c0          0x4 LONG 0xf90 DEFINED (__AltT5Interrupt)?<code 339> (__AltT5Interrupt):DEFINED (__T5Interrupt)?<code 339> (__T5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000c2          0x4 LONG 0xf90 DEFINED (__AltINT2Interrupt)?<code 339> (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?<code 339> (__INT2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000c4          0x4 LONG 0xf90 DEFINED (__AltU2RXInterrupt)?<code 339> (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?<code 339> (__U2RXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000c6          0x4 LONG 0xf90 DEFINED (__AltU2TXInterrupt)?<code 339> (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?<code 339> (__U2TXInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000c8          0x4 LONG 0xf90 DEFINED (__AltSPI2Interrupt)?<code 339> (__AltSPI2Interrupt):DEFINED (__SPI2Interrupt)?<code 339> (__SPI2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ca          0x4 LONG 0xf90 DEFINED (__AltC1Interrupt)?<code 339> (__AltC1Interrupt):DEFINED (__C1Interrupt)?<code 339> (__C1Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000cc          0x4 LONG 0xf90 DEFINED (__AltIC3Interrupt)?<code 339> (__AltIC3Interrupt):DEFINED (__IC3Interrupt)?<code 339> (__IC3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ce          0x4 LONG 0xf90 DEFINED (__AltIC4Interrupt)?<code 339> (__AltIC4Interrupt):DEFINED (__IC4Interrupt)?<code 339> (__IC4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000d0          0x4 LONG 0xf90 DEFINED (__AltIC5Interrupt)?<code 339> (__AltIC5Interrupt):DEFINED (__IC5Interrupt)?<code 339> (__IC5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000d2          0x4 LONG 0xf90 DEFINED (__AltIC6Interrupt)?<code 339> (__AltIC6Interrupt):DEFINED (__IC6Interrupt)?<code 339> (__IC6Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000d4          0x4 LONG 0xf90 DEFINED (__AltOC5Interrupt)?<code 339> (__AltOC5Interrupt):DEFINED (__OC5Interrupt)?<code 339> (__OC5Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000d6          0x4 LONG 0xf90 DEFINED (__AltOC6Interrupt)?<code 339> (__AltOC6Interrupt):DEFINED (__OC6Interrupt)?<code 339> (__OC6Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000d8          0x4 LONG 0xf90 DEFINED (__AltOC7Interrupt)?<code 339> (__AltOC7Interrupt):DEFINED (__OC7Interrupt)?<code 339> (__OC7Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000da          0x4 LONG 0xf90 DEFINED (__AltOC8Interrupt)?<code 339> (__AltOC8Interrupt):DEFINED (__OC8Interrupt)?<code 339> (__OC8Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000dc          0x4 LONG 0xf90 DEFINED (__AltINT3Interrupt)?<code 339> (__AltINT3Interrupt):DEFINED (__INT3Interrupt)?<code 339> (__INT3Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000de          0x4 LONG 0xf90 DEFINED (__AltINT4Interrupt)?<code 339> (__AltINT4Interrupt):DEFINED (__INT4Interrupt)?<code 339> (__INT4Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000e0          0x4 LONG 0xf90 DEFINED (__AltC2Interrupt)?<code 339> (__AltC2Interrupt):DEFINED (__C2Interrupt)?<code 339> (__C2Interrupt):<code 339> (__DefaultInterrupt)
-                  0x0000e2          0x4 LONG 0xf90 DEFINED (__AltPWMInterrupt)?<code 339> (__AltPWMInterrupt):DEFINED (__PWMInterrupt)?<code 339> (__PWMInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000e4          0x4 LONG 0xf90 DEFINED (__AltQEIInterrupt)?<code 339> (__AltQEIInterrupt):DEFINED (__QEIInterrupt)?<code 339> (__QEIInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000e6          0x4 LONG 0xf90 DEFINED (__AltDCIInterrupt)?<code 339> (__AltDCIInterrupt):DEFINED (__DCIInterrupt)?<code 339> (__DCIInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000e8          0x4 LONG 0xf90 DEFINED (__AltLVDInterrupt)?<code 339> (__AltLVDInterrupt):DEFINED (__LVDInterrupt)?<code 339> (__LVDInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ea          0x4 LONG 0xf90 DEFINED (__AltFLTAInterrupt)?<code 339> (__AltFLTAInterrupt):DEFINED (__FLTAInterrupt)?<code 339> (__FLTAInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ec          0x4 LONG 0xf90 DEFINED (__AltFLTBInterrupt)?<code 339> (__AltFLTBInterrupt):DEFINED (__FLTBInterrupt)?<code 339> (__FLTBInterrupt):<code 339> (__DefaultInterrupt)
-                  0x0000ee          0x4 LONG 0xf90 DEFINED (__AltInterrupt45)?<code 339> (__AltInterrupt45):DEFINED (__Interrupt45)?<code 339> (__Interrupt45):<code 339> (__DefaultInterrupt)
-                  0x0000f0          0x4 LONG 0xf90 DEFINED (__AltInterrupt46)?<code 339> (__AltInterrupt46):DEFINED (__Interrupt46)?<code 339> (__Interrupt46):<code 339> (__DefaultInterrupt)
-                  0x0000f2          0x4 LONG 0xf90 DEFINED (__AltInterrupt47)?<code 339> (__AltInterrupt47):DEFINED (__Interrupt47)?<code 339> (__Interrupt47):<code 339> (__DefaultInterrupt)
-                  0x0000f4          0x4 LONG 0xf90 DEFINED (__AltInterrupt48)?<code 339> (__AltInterrupt48):DEFINED (__Interrupt48)?<code 339> (__Interrupt48):<code 339> (__DefaultInterrupt)
-                  0x0000f6          0x4 LONG 0xf90 DEFINED (__AltInterrupt49)?<code 339> (__AltInterrupt49):DEFINED (__Interrupt49)?<code 339> (__Interrupt49):<code 339> (__DefaultInterrupt)
-                  0x0000f8          0x4 LONG 0xf90 DEFINED (__AltInterrupt50)?<code 339> (__AltInterrupt50):DEFINED (__Interrupt50)?<code 339> (__Interrupt50):<code 339> (__DefaultInterrupt)
-                  0x0000fa          0x4 LONG 0xf90 DEFINED (__AltInterrupt51)?<code 339> (__AltInterrupt51):DEFINED (__Interrupt51)?<code 339> (__Interrupt51):<code 339> (__DefaultInterrupt)
-                  0x0000fc          0x4 LONG 0xf90 DEFINED (__AltInterrupt52)?<code 339> (__AltInterrupt52):DEFINED (__Interrupt52)?<code 339> (__Interrupt52):<code 339> (__DefaultInterrupt)
-                  0x0000fe          0x4 LONG 0xf90 DEFINED (__AltInterrupt53)?<code 339> (__AltInterrupt53):DEFINED (__Interrupt53)?<code 339> (__Interrupt53):<code 339> (__DefaultInterrupt)
+                  0x000084          0x4 LONG 0x1ac DEFINED (__AltReservedTrap0)?ABSOLUTE (__AltReservedTrap0):DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000086          0x4 LONG 0x1ac DEFINED (__AltOscillatorFail)?ABSOLUTE (__AltOscillatorFail):DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000088          0x4 LONG 0x1ac DEFINED (__AltAddressError)?ABSOLUTE (__AltAddressError):DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008a          0x4 LONG 0x1ac DEFINED (__AltStackError)?ABSOLUTE (__AltStackError):DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008c          0x4 LONG 0x1ac DEFINED (__AltMathError)?ABSOLUTE (__AltMathError):DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008e          0x4 LONG 0x1ac DEFINED (__AltReservedTrap5)?ABSOLUTE (__AltReservedTrap5):DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000090          0x4 LONG 0x1ac DEFINED (__AltReservedTrap6)?ABSOLUTE (__AltReservedTrap6):DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000092          0x4 LONG 0x1ac DEFINED (__AltReservedTrap7)?ABSOLUTE (__AltReservedTrap7):DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000094          0x4 LONG 0x1ac DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000096          0x4 LONG 0x1ac DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000098          0x4 LONG 0x1ac DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009a          0x4 LONG 0x12ca DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009c          0x4 LONG 0x1ac DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009e          0x4 LONG 0x1ac DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a0          0x4 LONG 0x12ee DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a2          0x4 LONG 0x1ac DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a4          0x4 LONG 0x1ac DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a6          0x4 LONG 0xdd0 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a8          0x4 LONG 0x1ac DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000aa          0x4 LONG 0x17a2 DEFINED (__AltADCInterrupt)?ABSOLUTE (__AltADCInterrupt):DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ac          0x4 LONG 0x1ac DEFINED (__AltNVMInterrupt)?ABSOLUTE (__AltNVMInterrupt):DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ae          0x4 LONG 0x1ac DEFINED (__AltSI2CInterrupt)?ABSOLUTE (__AltSI2CInterrupt):DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b0          0x4 LONG 0x1ac DEFINED (__AltMI2CInterrupt)?ABSOLUTE (__AltMI2CInterrupt):DEFINED (__MI2CInterrupt)?ABSOLUTE (__MI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b2          0x4 LONG 0x1ac DEFINED (__AltCNInterrupt)?ABSOLUTE (__AltCNInterrupt):DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b4          0x4 LONG 0x1ac DEFINED (__AltINT1Interrupt)?ABSOLUTE (__AltINT1Interrupt):DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b6          0x4 LONG 0x1ac DEFINED (__AltIC7Interrupt)?ABSOLUTE (__AltIC7Interrupt):DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b8          0x4 LONG 0x1ac DEFINED (__AltIC8Interrupt)?ABSOLUTE (__AltIC8Interrupt):DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ba          0x4 LONG 0x1ac DEFINED (__AltOC3Interrupt)?ABSOLUTE (__AltOC3Interrupt):DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000bc          0x4 LONG 0x1ac DEFINED (__AltOC4Interrupt)?ABSOLUTE (__AltOC4Interrupt):DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000be          0x4 LONG 0x1ac DEFINED (__AltT4Interrupt)?ABSOLUTE (__AltT4Interrupt):DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c0          0x4 LONG 0x1ac DEFINED (__AltT5Interrupt)?ABSOLUTE (__AltT5Interrupt):DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c2          0x4 LONG 0x1ac DEFINED (__AltINT2Interrupt)?ABSOLUTE (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c4          0x4 LONG 0x1ac DEFINED (__AltU2RXInterrupt)?ABSOLUTE (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c6          0x4 LONG 0x1ac DEFINED (__AltU2TXInterrupt)?ABSOLUTE (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c8          0x4 LONG 0x1ac DEFINED (__AltSPI2Interrupt)?ABSOLUTE (__AltSPI2Interrupt):DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ca          0x4 LONG 0x1ac DEFINED (__AltC1Interrupt)?ABSOLUTE (__AltC1Interrupt):DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000cc          0x4 LONG 0x1ac DEFINED (__AltIC3Interrupt)?ABSOLUTE (__AltIC3Interrupt):DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ce          0x4 LONG 0x1ac DEFINED (__AltIC4Interrupt)?ABSOLUTE (__AltIC4Interrupt):DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d0          0x4 LONG 0x1ac DEFINED (__AltIC5Interrupt)?ABSOLUTE (__AltIC5Interrupt):DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d2          0x4 LONG 0x1ac DEFINED (__AltIC6Interrupt)?ABSOLUTE (__AltIC6Interrupt):DEFINED (__IC6Interrupt)?ABSOLUTE (__IC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d4          0x4 LONG 0x1ac DEFINED (__AltOC5Interrupt)?ABSOLUTE (__AltOC5Interrupt):DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d6          0x4 LONG 0x1ac DEFINED (__AltOC6Interrupt)?ABSOLUTE (__AltOC6Interrupt):DEFINED (__OC6Interrupt)?ABSOLUTE (__OC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d8          0x4 LONG 0x1ac DEFINED (__AltOC7Interrupt)?ABSOLUTE (__AltOC7Interrupt):DEFINED (__OC7Interrupt)?ABSOLUTE (__OC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000da          0x4 LONG 0x1ac DEFINED (__AltOC8Interrupt)?ABSOLUTE (__AltOC8Interrupt):DEFINED (__OC8Interrupt)?ABSOLUTE (__OC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000dc          0x4 LONG 0x1ac DEFINED (__AltINT3Interrupt)?ABSOLUTE (__AltINT3Interrupt):DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000de          0x4 LONG 0x1ac DEFINED (__AltINT4Interrupt)?ABSOLUTE (__AltINT4Interrupt):DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e0          0x4 LONG 0x1ac DEFINED (__AltC2Interrupt)?ABSOLUTE (__AltC2Interrupt):DEFINED (__C2Interrupt)?ABSOLUTE (__C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e2          0x4 LONG 0x1ac DEFINED (__AltPWMInterrupt)?ABSOLUTE (__AltPWMInterrupt):DEFINED (__PWMInterrupt)?ABSOLUTE (__PWMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e4          0x4 LONG 0x1ac DEFINED (__AltQEIInterrupt)?ABSOLUTE (__AltQEIInterrupt):DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e6          0x4 LONG 0x1ac DEFINED (__AltDCIInterrupt)?ABSOLUTE (__AltDCIInterrupt):DEFINED (__DCIInterrupt)?ABSOLUTE (__DCIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e8          0x4 LONG 0x1ac DEFINED (__AltLVDInterrupt)?ABSOLUTE (__AltLVDInterrupt):DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ea          0x4 LONG 0x1ac DEFINED (__AltFLTAInterrupt)?ABSOLUTE (__AltFLTAInterrupt):DEFINED (__FLTAInterrupt)?ABSOLUTE (__FLTAInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ec          0x4 LONG 0x1ac DEFINED (__AltFLTBInterrupt)?ABSOLUTE (__AltFLTBInterrupt):DEFINED (__FLTBInterrupt)?ABSOLUTE (__FLTBInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ee          0x4 LONG 0x1ac DEFINED (__AltInterrupt45)?ABSOLUTE (__AltInterrupt45):DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f0          0x4 LONG 0x1ac DEFINED (__AltInterrupt46)?ABSOLUTE (__AltInterrupt46):DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f2          0x4 LONG 0x1ac DEFINED (__AltInterrupt47)?ABSOLUTE (__AltInterrupt47):DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f4          0x4 LONG 0x1ac DEFINED (__AltInterrupt48)?ABSOLUTE (__AltInterrupt48):DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f6          0x4 LONG 0x1ac DEFINED (__AltInterrupt49)?ABSOLUTE (__AltInterrupt49):DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f8          0x4 LONG 0x1ac DEFINED (__AltInterrupt50)?ABSOLUTE (__AltInterrupt50):DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fa          0x4 LONG 0x1ac DEFINED (__AltInterrupt51)?ABSOLUTE (__AltInterrupt51):DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fc          0x4 LONG 0x1ac DEFINED (__AltInterrupt52)?ABSOLUTE (__AltInterrupt52):DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fe          0x4 LONG 0x1ac DEFINED (__AltInterrupt53)?ABSOLUTE (__AltInterrupt53):DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -655,10 +738,13 @@ userdata
                     0x0040                  _DOENDH = 0x40
                     0x0042                  SR = 0x42
                     0x0042                  _SR = 0x42
+                    0x0042                  _SRbits = 0x42
                     0x0044                  CORCON = 0x44
                     0x0044                  _CORCON = 0x44
+                    0x0044                  _CORCONbits = 0x44
                     0x0046                  MODCON = 0x46
                     0x0046                  _MODCON = 0x46
+                    0x0046                  _MODCONbits = 0x46
                     0x0048                  XMODSRT = 0x48
                     0x0048                  _XMODSRT = 0x48
                     0x004a                  XMODEND = 0x4a
@@ -669,56 +755,80 @@ userdata
                     0x004e                  _YMODEND = 0x4e
                     0x0050                  XBREV = 0x50
                     0x0050                  _XBREV = 0x50
+                    0x0050                  _XBREVbits = 0x50
                     0x0052                  DISICNT = 0x52
                     0x0052                  _DISICNT = 0x52
+                    0x0052                  _DISICNTbits = 0x52
                     0x0080                  INTCON1 = 0x80
                     0x0080                  _INTCON1 = 0x80
+                    0x0080                  _INTCON1bits = 0x80
                     0x0082                  INTCON2 = 0x82
                     0x0082                  _INTCON2 = 0x82
+                    0x0082                  _INTCON2bits = 0x82
                     0x0084                  IFS0 = 0x84
                     0x0084                  _IFS0 = 0x84
+                    0x0084                  _IFS0bits = 0x84
                     0x0086                  IFS1 = 0x86
                     0x0086                  _IFS1 = 0x86
+                    0x0086                  _IFS1bits = 0x86
                     0x0088                  IFS2 = 0x88
                     0x0088                  _IFS2 = 0x88
+                    0x0088                  _IFS2bits = 0x88
                     0x008c                  IEC0 = 0x8c
                     0x008c                  _IEC0 = 0x8c
+                    0x008c                  _IEC0bits = 0x8c
                     0x008e                  IEC1 = 0x8e
                     0x008e                  _IEC1 = 0x8e
+                    0x008e                  _IEC1bits = 0x8e
                     0x0090                  IEC2 = 0x90
                     0x0090                  _IEC2 = 0x90
+                    0x0090                  _IEC2bits = 0x90
                     0x0094                  IPC0 = 0x94
                     0x0094                  _IPC0 = 0x94
+                    0x0094                  _IPC0bits = 0x94
                     0x0096                  IPC1 = 0x96
                     0x0096                  _IPC1 = 0x96
+                    0x0096                  _IPC1bits = 0x96
                     0x0098                  IPC2 = 0x98
                     0x0098                  _IPC2 = 0x98
+                    0x0098                  _IPC2bits = 0x98
                     0x009a                  IPC3 = 0x9a
                     0x009a                  _IPC3 = 0x9a
+                    0x009a                  _IPC3bits = 0x9a
                     0x009c                  IPC4 = 0x9c
                     0x009c                  _IPC4 = 0x9c
+                    0x009c                  _IPC4bits = 0x9c
                     0x009e                  IPC5 = 0x9e
                     0x009e                  _IPC5 = 0x9e
+                    0x009e                  _IPC5bits = 0x9e
                     0x00a0                  IPC6 = 0xa0
                     0x00a0                  _IPC6 = 0xa0
+                    0x00a0                  _IPC6bits = 0xa0
                     0x00a8                  IPC10 = 0xa8
                     0x00a8                  _IPC10 = 0xa8
+                    0x00a8                  _IPC10bits = 0xa8
                     0x00b0                  INTTREG = 0xb0
                     0x00b0                  _INTTREG = 0xb0
+                    0x00b0                  _INTTREGbits = 0xb0
                     0x00c0                  CNEN1 = 0xc0
                     0x00c0                  _CNEN1 = 0xc0
+                    0x00c0                  _CNEN1bits = 0xc0
                     0x00c2                  CNEN2 = 0xc2
                     0x00c2                  _CNEN2 = 0xc2
+                    0x00c2                  _CNEN2bits = 0xc2
                     0x00c4                  CNPU1 = 0xc4
                     0x00c4                  _CNPU1 = 0xc4
+                    0x00c4                  _CNPU1bits = 0xc4
                     0x00c6                  CNPU2 = 0xc6
                     0x00c6                  _CNPU2 = 0xc6
+                    0x00c6                  _CNPU2bits = 0xc6
                     0x0100                  TMR1 = 0x100
                     0x0100                  _TMR1 = 0x100
                     0x0102                  PR1 = 0x102
                     0x0102                  _PR1 = 0x102
                     0x0104                  T1CON = 0x104
                     0x0104                  _T1CON = 0x104
+                    0x0104                  _T1CONbits = 0x104
                     0x0106                  TMR2 = 0x106
                     0x0106                  _TMR2 = 0x106
                     0x0108                  TMR3HLD = 0x108
@@ -731,64 +841,86 @@ userdata
                     0x010e                  _PR3 = 0x10e
                     0x0110                  T2CON = 0x110
                     0x0110                  _T2CON = 0x110
+                    0x0110                  _T2CONbits = 0x110
                     0x0112                  T3CON = 0x112
                     0x0112                  _T3CON = 0x112
+                    0x0112                  _T3CONbits = 0x112
                     0x0140                  IC1BUF = 0x140
                     0x0140                  _IC1BUF = 0x140
                     0x0142                  IC1CON = 0x142
                     0x0142                  _IC1CON = 0x142
+                    0x0142                  _IC1CONbits = 0x142
                     0x0144                  IC2BUF = 0x144
                     0x0144                  _IC2BUF = 0x144
                     0x0146                  IC2CON = 0x146
                     0x0146                  _IC2CON = 0x146
+                    0x0146                  _IC2CONbits = 0x146
                     0x0180                  OC1RS = 0x180
                     0x0180                  _OC1RS = 0x180
                     0x0182                  OC1R = 0x182
                     0x0182                  _OC1R = 0x182
                     0x0184                  OC1CON = 0x184
                     0x0184                  _OC1CON = 0x184
+                    0x0184                  _OC1CONbits = 0x184
                     0x0186                  OC2RS = 0x186
                     0x0186                  _OC2RS = 0x186
                     0x0188                  OC2R = 0x188
                     0x0188                  _OC2R = 0x188
                     0x018a                  OC2CON = 0x18a
                     0x018a                  _OC2CON = 0x18a
+                    0x018a                  _OC2CONbits = 0x18a
                     0x0200                  I2CRCV = 0x200
                     0x0200                  _I2CRCV = 0x200
+                    0x0200                  _I2CRCVbits = 0x200
                     0x0202                  I2CTRN = 0x202
                     0x0202                  _I2CTRN = 0x202
+                    0x0202                  _I2CTRNbits = 0x202
                     0x0204                  I2CBRG = 0x204
                     0x0204                  _I2CBRG = 0x204
+                    0x0204                  _I2CBRGbits = 0x204
                     0x0206                  I2CCON = 0x206
                     0x0206                  _I2CCON = 0x206
+                    0x0206                  _I2CCONbits = 0x206
                     0x0208                  I2CSTAT = 0x208
                     0x0208                  _I2CSTAT = 0x208
+                    0x0208                  _I2CSTATbits = 0x208
                     0x020a                  I2CADD = 0x20a
                     0x020a                  _I2CADD = 0x20a
+                    0x020a                  _I2CADDbits = 0x20a
                     0x020c                  U1MODE = 0x20c
                     0x020c                  _U1MODE = 0x20c
+                    0x020c                  _U1MODEbits = 0x20c
                     0x020e                  U1STA = 0x20e
                     0x020e                  _U1STA = 0x20e
+                    0x020e                  _U1STAbits = 0x20e
                     0x0210                  U1TXREG = 0x210
                     0x0210                  _U1TXREG = 0x210
+                    0x0210                  _U1TXREGbits = 0x210
                     0x0212                  U1RXREG = 0x212
                     0x0212                  _U1RXREG = 0x212
+                    0x0212                  _U1RXREGbits = 0x212
                     0x0214                  U1BRG = 0x214
                     0x0214                  _U1BRG = 0x214
                     0x0216                  U2MODE = 0x216
                     0x0216                  _U2MODE = 0x216
+                    0x0216                  _U2MODEbits = 0x216
                     0x0218                  U2STA = 0x218
                     0x0218                  _U2STA = 0x218
+                    0x0218                  _U2STAbits = 0x218
                     0x021a                  U2TXREG = 0x21a
                     0x021a                  _U2TXREG = 0x21a
+                    0x021a                  _U2TXREGbits = 0x21a
                     0x021c                  U2RXREG = 0x21c
                     0x021c                  _U2RXREG = 0x21c
+                    0x021c                  _U2RXREGbits = 0x21c
                     0x021e                  U2BRG = 0x21e
                     0x021e                  _U2BRG = 0x21e
                     0x0220                  SPI1STAT = 0x220
                     0x0220                  _SPI1STAT = 0x220
+                    0x0220                  _SPI1STATbits = 0x220
                     0x0222                  SPI1CON = 0x222
                     0x0222                  _SPI1CON = 0x222
+                    0x0222                  _SPI1CONbits = 0x222
                     0x0224                  SPI1BUF = 0x224
                     0x0224                  _SPI1BUF = 0x224
                     0x0280                  ADCBUF0 = 0x280
@@ -825,228 +957,100 @@ userdata
                     0x029e                  _ADCBUFF = 0x29e
                     0x02a0                  ADCON1 = 0x2a0
                     0x02a0                  _ADCON1 = 0x2a0
+                    0x02a0                  _ADCON1bits = 0x2a0
                     0x02a2                  ADCON2 = 0x2a2
                     0x02a2                  _ADCON2 = 0x2a2
+                    0x02a2                  _ADCON2bits = 0x2a2
                     0x02a4                  ADCON3 = 0x2a4
                     0x02a4                  _ADCON3 = 0x2a4
+                    0x02a4                  _ADCON3bits = 0x2a4
                     0x02a6                  ADCHS = 0x2a6
                     0x02a6                  _ADCHS = 0x2a6
+                    0x02a6                  _ADCHSbits = 0x2a6
                     0x02a8                  ADPCFG = 0x2a8
                     0x02a8                  _ADPCFG = 0x2a8
+                    0x02a8                  _ADPCFGbits = 0x2a8
                     0x02aa                  ADCSSL = 0x2aa
                     0x02aa                  _ADCSSL = 0x2aa
+                    0x02aa                  _ADCSSLbits = 0x2aa
                     0x02c0                  TRISA = 0x2c0
                     0x02c0                  _TRISA = 0x2c0
+                    0x02c0                  _TRISAbits = 0x2c0
                     0x02c2                  PORTA = 0x2c2
                     0x02c2                  _PORTA = 0x2c2
+                    0x02c2                  _PORTAbits = 0x2c2
                     0x02c4                  LATA = 0x2c4
                     0x02c4                  _LATA = 0x2c4
+                    0x02c4                  _LATAbits = 0x2c4
                     0x02c6                  TRISB = 0x2c6
                     0x02c6                  _TRISB = 0x2c6
+                    0x02c6                  _TRISBbits = 0x2c6
                     0x02c8                  PORTB = 0x2c8
                     0x02c8                  _PORTB = 0x2c8
+                    0x02c8                  _PORTBbits = 0x2c8
                     0x02ca                  LATB = 0x2ca
                     0x02ca                  _LATB = 0x2ca
+                    0x02ca                  _LATBbits = 0x2ca
                     0x02cc                  TRISC = 0x2cc
                     0x02cc                  _TRISC = 0x2cc
+                    0x02cc                  _TRISCbits = 0x2cc
                     0x02ce                  PORTC = 0x2ce
                     0x02ce                  _PORTC = 0x2ce
+                    0x02ce                  _PORTCbits = 0x2ce
                     0x02d0                  LATC = 0x2d0
                     0x02d0                  _LATC = 0x2d0
+                    0x02d0                  _LATCbits = 0x2d0
                     0x02d2                  TRISD = 0x2d2
                     0x02d2                  _TRISD = 0x2d2
+                    0x02d2                  _TRISDbits = 0x2d2
                     0x02d4                  PORTD = 0x2d4
                     0x02d4                  _PORTD = 0x2d4
+                    0x02d4                  _PORTDbits = 0x2d4
                     0x02d6                  LATD = 0x2d6
                     0x02d6                  _LATD = 0x2d6
+                    0x02d6                  _LATDbits = 0x2d6
                     0x02de                  TRISF = 0x2de
                     0x02de                  _TRISF = 0x2de
+                    0x02de                  _TRISFbits = 0x2de
                     0x02e0                  PORTF = 0x2e0
                     0x02e0                  _PORTF = 0x2e0
+                    0x02e0                  _PORTFbits = 0x2e0
                     0x02e2                  LATF = 0x2e2
                     0x02e2                  _LATF = 0x2e2
+                    0x02e2                  _LATFbits = 0x2e2
                     0x0740                  RCON = 0x740
                     0x0740                  _RCON = 0x740
+                    0x0740                  _RCONbits = 0x740
                     0x0742                  OSCCON = 0x742
                     0x0742                  _OSCCON = 0x742
+                    0x0742                  _OSCCONbits = 0x742
+                    0x0742                  OSCCONL = 0x742
+                    0x0742                  _OSCCONL = 0x742
+                    0x0743                  OSCCONH = 0x743
+                    0x0743                  _OSCCONH = 0x743
                     0x0744                  OSCTUN = 0x744
                     0x0744                  _OSCTUN = 0x744
-                    0x0742                  OSCCONL = OSCCON
-                    0x0742                  _OSCCONL = OSCCON
-                    0x0743                  OSCCONH = (OSCCON + 0x1)
-                    0x0743                  _OSCCONH = (OSCCON + 0x1)
+                    0x0744                  _OSCTUNbits = 0x744
                     0x0760                  NVMCON = 0x760
                     0x0760                  _NVMCON = 0x760
+                    0x0760                  _NVMCONbits = 0x760
                     0x0762                  NVMADR = 0x762
                     0x0762                  _NVMADR = 0x762
                     0x0764                  NVMADRU = 0x764
                     0x0764                  _NVMADRU = 0x764
+                    0x0764                  _NVMADRUbits = 0x764
                     0x0766                  NVMKEY = 0x766
                     0x0766                  _NVMKEY = 0x766
                     0x0770                  PMD1 = 0x770
                     0x0770                  _PMD1 = 0x770
+                    0x0770                  _PMD1bits = 0x770
                     0x0772                  PMD2 = 0x772
                     0x0772                  _PMD2 = 0x772
-                    0x0774                  PMD3 = 0x774
-                    0x0774                  _PMD3 = 0x774
+                    0x0772                  _PMD2bits = 0x772
                     0x0022                  ACCA = 0x22
                     0x0022                  _ACCA = 0x22
                     0x0028                  ACCB = 0x28
                     0x0028                  _ACCB = 0x28
-                    0x0042                  SRbits = 0x42
-                    0x0042                  _SRbits = 0x42
-                    0x0044                  CORCONbits = 0x44
-                    0x0044                  _CORCONbits = 0x44
-                    0x0046                  MODCONbits = 0x46
-                    0x0046                  _MODCONbits = 0x46
-                    0x0050                  XBREVbits = 0x50
-                    0x0050                  _XBREVbits = 0x50
-                    0x0052                  DISICNTbits = 0x52
-                    0x0052                  _DISICNTbits = 0x52
-                    0x0080                  INTCON1bits = 0x80
-                    0x0080                  _INTCON1bits = 0x80
-                    0x0082                  INTCON2bits = 0x82
-                    0x0082                  _INTCON2bits = 0x82
-                    0x0084                  IFS0bits = 0x84
-                    0x0084                  _IFS0bits = 0x84
-                    0x0086                  IFS1bits = 0x86
-                    0x0086                  _IFS1bits = 0x86
-                    0x0088                  IFS2bits = 0x88
-                    0x0088                  _IFS2bits = 0x88
-                    0x008c                  IEC0bits = 0x8c
-                    0x008c                  _IEC0bits = 0x8c
-                    0x008e                  IEC1bits = 0x8e
-                    0x008e                  _IEC1bits = 0x8e
-                    0x0090                  IEC2bits = 0x90
-                    0x0090                  _IEC2bits = 0x90
-                    0x0094                  IPC0bits = 0x94
-                    0x0094                  _IPC0bits = 0x94
-                    0x0096                  IPC1bits = 0x96
-                    0x0096                  _IPC1bits = 0x96
-                    0x0098                  IPC2bits = 0x98
-                    0x0098                  _IPC2bits = 0x98
-                    0x009a                  IPC3bits = 0x9a
-                    0x009a                  _IPC3bits = 0x9a
-                    0x009c                  IPC4bits = 0x9c
-                    0x009c                  _IPC4bits = 0x9c
-                    0x009e                  IPC5bits = 0x9e
-                    0x009e                  _IPC5bits = 0x9e
-                    0x00a0                  IPC6bits = 0xa0
-                    0x00a0                  _IPC6bits = 0xa0
-                    0x00a8                  IPC10bits = 0xa8
-                    0x00a8                  _IPC10bits = 0xa8
-                    0x00b0                  INTTREGbits = 0xb0
-                    0x00b0                  _INTTREGbits = 0xb0
-                    0x00c0                  CNEN1bits = 0xc0
-                    0x00c0                  _CNEN1bits = 0xc0
-                    0x00c2                  CNEN2bits = 0xc2
-                    0x00c2                  _CNEN2bits = 0xc2
-                    0x00c4                  CNPU1bits = 0xc4
-                    0x00c4                  _CNPU1bits = 0xc4
-                    0x00c6                  CNPU2bits = 0xc6
-                    0x00c6                  _CNPU2bits = 0xc6
-                    0x0104                  T1CONbits = 0x104
-                    0x0104                  _T1CONbits = 0x104
-                    0x0110                  T2CONbits = 0x110
-                    0x0110                  _T2CONbits = 0x110
-                    0x0112                  T3CONbits = 0x112
-                    0x0112                  _T3CONbits = 0x112
-                    0x0142                  IC1CONbits = 0x142
-                    0x0142                  _IC1CONbits = 0x142
-                    0x0146                  IC2CONbits = 0x146
-                    0x0146                  _IC2CONbits = 0x146
-                    0x0184                  OC1CONbits = 0x184
-                    0x0184                  _OC1CONbits = 0x184
-                    0x018a                  OC2CONbits = 0x18a
-                    0x018a                  _OC2CONbits = 0x18a
-                    0x0200                  I2CRCVbits = 0x200
-                    0x0200                  _I2CRCVbits = 0x200
-                    0x0202                  I2CTRNbits = 0x202
-                    0x0202                  _I2CTRNbits = 0x202
-                    0x0204                  I2CBRGbits = 0x204
-                    0x0204                  _I2CBRGbits = 0x204
-                    0x0206                  I2CCONbits = 0x206
-                    0x0206                  _I2CCONbits = 0x206
-                    0x0208                  I2CSTATbits = 0x208
-                    0x0208                  _I2CSTATbits = 0x208
-                    0x020a                  I2CADDbits = 0x20a
-                    0x020a                  _I2CADDbits = 0x20a
-                    0x020c                  U1MODEbits = 0x20c
-                    0x020c                  _U1MODEbits = 0x20c
-                    0x020e                  U1STAbits = 0x20e
-                    0x020e                  _U1STAbits = 0x20e
-                    0x0210                  U1TXREGbits = 0x210
-                    0x0210                  _U1TXREGbits = 0x210
-                    0x0212                  U1RXREGbits = 0x212
-                    0x0212                  _U1RXREGbits = 0x212
-                    0x0216                  U2MODEbits = 0x216
-                    0x0216                  _U2MODEbits = 0x216
-                    0x0218                  U2STAbits = 0x218
-                    0x0218                  _U2STAbits = 0x218
-                    0x021a                  U2TXREGbits = 0x21a
-                    0x021a                  _U2TXREGbits = 0x21a
-                    0x021c                  U2RXREGbits = 0x21c
-                    0x021c                  _U2RXREGbits = 0x21c
-                    0x0220                  SPI1STATbits = 0x220
-                    0x0220                  _SPI1STATbits = 0x220
-                    0x0222                  SPI1CONbits = 0x222
-                    0x0222                  _SPI1CONbits = 0x222
-                    0x02a0                  ADCON1bits = 0x2a0
-                    0x02a0                  _ADCON1bits = 0x2a0
-                    0x02a2                  ADCON2bits = 0x2a2
-                    0x02a2                  _ADCON2bits = 0x2a2
-                    0x02a4                  ADCON3bits = 0x2a4
-                    0x02a4                  _ADCON3bits = 0x2a4
-                    0x02a6                  ADCHSbits = 0x2a6
-                    0x02a6                  _ADCHSbits = 0x2a6
-                    0x02a8                  ADPCFGbits = 0x2a8
-                    0x02a8                  _ADPCFGbits = 0x2a8
-                    0x02aa                  ADCSSLbits = 0x2aa
-                    0x02aa                  _ADCSSLbits = 0x2aa
-                    0x02c0                  TRISAbits = 0x2c0
-                    0x02c0                  _TRISAbits = 0x2c0
-                    0x02c2                  PORTAbits = 0x2c2
-                    0x02c2                  _PORTAbits = 0x2c2
-                    0x02c4                  LATAbits = 0x2c4
-                    0x02c4                  _LATAbits = 0x2c4
-                    0x02c6                  TRISBbits = 0x2c6
-                    0x02c6                  _TRISBbits = 0x2c6
-                    0x02c8                  PORTBbits = 0x2c8
-                    0x02c8                  _PORTBbits = 0x2c8
-                    0x02ca                  LATBbits = 0x2ca
-                    0x02ca                  _LATBbits = 0x2ca
-                    0x02cc                  TRISCbits = 0x2cc
-                    0x02cc                  _TRISCbits = 0x2cc
-                    0x02ce                  PORTCbits = 0x2ce
-                    0x02ce                  _PORTCbits = 0x2ce
-                    0x02d0                  LATCbits = 0x2d0
-                    0x02d0                  _LATCbits = 0x2d0
-                    0x02d2                  TRISDbits = 0x2d2
-                    0x02d2                  _TRISDbits = 0x2d2
-                    0x02d4                  PORTDbits = 0x2d4
-                    0x02d4                  _PORTDbits = 0x2d4
-                    0x02d6                  LATDbits = 0x2d6
-                    0x02d6                  _LATDbits = 0x2d6
-                    0x02de                  TRISFbits = 0x2de
-                    0x02de                  _TRISFbits = 0x2de
-                    0x02e0                  PORTFbits = 0x2e0
-                    0x02e0                  _PORTFbits = 0x2e0
-                    0x02e2                  LATFbits = 0x2e2
-                    0x02e2                  _LATFbits = 0x2e2
-                    0x0740                  RCONbits = 0x740
-                    0x0740                  _RCONbits = 0x740
-                    0x0742                  OSCCONbits = 0x742
-                    0x0742                  _OSCCONbits = 0x742
-                    0x0744                  OSCTUNbits = 0x744
-                    0x0744                  _OSCTUNbits = 0x744
-                    0x0760                  NVMCONbits = 0x760
-                    0x0760                  _NVMCONbits = 0x760
-                    0x0770                  PMD1bits = 0x770
-                    0x0770                  _PMD1bits = 0x770
-                    0x0772                  PMD2bits = 0x772
-                    0x0772                  _PMD2bits = 0x772
-                    0x0774                  PMD3bits = 0x774
-                    0x0774                  _PMD3bits = 0x774
                     0x0140                  IC1 = 0x140
                     0x0140                  _IC1 = 0x140
                     0x0144                  IC2 = 0x144
@@ -1055,27 +1059,27 @@ userdata
                     0x0180                  _OC1 = 0x180
                     0x0186                  OC2 = 0x186
                     0x0186                  _OC2 = 0x186
+                    0x0220                  SPI1 = 0x220
+                    0x0220                  _SPI1 = 0x220
                     0x020c                  UART1 = 0x20c
                     0x020c                  _UART1 = 0x20c
                     0x0216                  UART2 = 0x216
                     0x0216                  _UART2 = 0x216
-                    0x0220                  SPI1 = 0x220
-                    0x0220                  _SPI1 = 0x220
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_PICKIT2 = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
                     0x0001                  __ICD2RAM = 0x1
 START GROUP
-LOAD c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a
-LOAD c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libm-coff.a
-LOAD c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libc-coff.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libm-coff.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a
 END GROUP
 OUTPUT(./obj\Traktana.cof coff-pic30)
 LOAD data_init
 LOAD default_isr
 
 __c30_signature
-                  0x000000         0x96
+                  0x000000         0xcc
  __c30_signature
                   0x000000          0x6 tmp\main.o
  __c30_signature
@@ -1085,47 +1089,65 @@ __c30_signature
  __c30_signature
                   0x000012          0x6 tmp\motor_pid.o
  __c30_signature
-                  0x000018          0x6 E:\Documentos\Victor\Projetos MPLAB\traktana_fw\lib\libdsp-coff.a(pid.obj)
+                  0x000018          0x6 C:\Users\Rafael\Desktop\traktana\sw\traktana_fw\lib\libdsp-coff.a(pid.obj)
  __c30_signature
-                  0x00001e          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
+                  0x00001e          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadUART1.o)
  __c30_signature
-                  0x000024          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
+                  0x000024          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(DataRdyUART1.o)
  __c30_signature
-                  0x00002a          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
+                  0x00002a          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(WriteUART1.o)
  __c30_signature
-                  0x000030          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
+                  0x000030          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
  __c30_signature
-                  0x000036          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
+                  0x000036          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(BusyUART1.o)
  __c30_signature
-                  0x00003c          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(putsUART1.o)
+                  0x00003c          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
  __c30_signature
-                  0x000042          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntUART1.o)
+                  0x000042          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
  __c30_signature
-                  0x000048          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer1.o)
+                  0x000048          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
  __c30_signature
-                  0x00004e          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer1.o)
+                  0x00004e          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
  __c30_signature
-                  0x000054          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer2.o)
+                  0x000054          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
  __c30_signature
-                  0x00005a          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer2.o)
+                  0x00005a          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
  __c30_signature
-                  0x000060          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ReadADC12.o)
+                  0x000060          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(SetDCOC1PWM.o)
  __c30_signature
-                  0x000066          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
+                  0x000066          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntTimer3.o)
  __c30_signature
-                  0x00006c          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
+                  0x00006c          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenTimer3.o)
  __c30_signature
-                  0x000072          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
+                  0x000072          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(CloseOC1.o)
  __c30_signature
-                  0x000078          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
+                  0x000078          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(ConfigIntOC1.o)
  __c30_signature
-                  0x00007e          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
+                  0x00007e          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib/dsPIC30F\libp30F3014-coff.a(OpenOC1.o)
  __c30_signature
-                  0x000084          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+                  0x000084          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
  __c30_signature
-                  0x00008a          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(delay32.o)
+                  0x00008a          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(delay32.o)
  __c30_signature
-                  0x000090          0x6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+                  0x000090          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+ __c30_signature
+                  0x000096          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(memcmp.XXo)
+ __c30_signature
+                  0x00009c          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(sprintf_cdnopuxX.XXo)
+ __c30_signature
+                  0x0000a2          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo)
+ __c30_signature
+                  0x0000a8          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(fputc.XXo)
+ __c30_signature
+                  0x0000ae          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(_iob.XXo)
+ __c30_signature
+                  0x0000b4          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(flsbuf.XXo)
+ __c30_signature
+                  0x0000ba          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(write.o)
+ __c30_signature
+                  0x0000c0          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(c30_uart.o)
+ __c30_signature
+                  0x0000c6          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libm-coff.a(divmoddi3.o)
 
 .xbss               0x0850          0x6
  .xbss              0x0850          0x6 tmp\motor_pid.o
@@ -1139,76 +1161,90 @@ __c30_signature
  .nbss              0x0856         0x14 tmp\uart.o
                     0x0856                  buf
 
-.ndata              0x086a          0xa
- .ndata             0x086a          0xa tmp\steppers.o
-                    0x086a                  stepper_enable1
-                    0x086b                  stepper_enable2
-                    0x086c                  direction1
-                    0x086d                  direction2
-                    0x086e                  mode_step1
-                    0x086f                  mode_step2
-                    0x0870                  pos_stepper1
-                    0x0872                  pos_stepper2
+.ndata              0x086a         0x14
+ .ndata             0x086a          0xa tmp\uart.o
+                    0x086a                  wbufptr
+                    0x086c                  rbufptr
+                    0x086e                  bufstt
+                    0x0870                  cmdissued
+                    0x0871                  cmdblocked
+                    0x0872                  adc_readout
+ .ndata             0x0874          0xa tmp\steppers.o
+                    0x0874                  stepper_enable1
+                    0x0875                  stepper_enable2
+                    0x0876                  direction1
+                    0x0877                  direction2
+                    0x0878                  mode_step1
+                    0x0879                  mode_step2
+                    0x087a                  pos_stepper1
+                    0x087c                  pos_stepper2
 
-.nbss               0x0874          0xa
- .nbss              0x0874          0xa tmp\motor_pid.o
-                    0x0874                  fooPID
+.nbss               0x087e         0x12
+ .nbss              0x087e          0xa tmp\motor_pid.o
+                    0x087e                  fooPID
+ .nbss              0x0888          0x8 tmp\steppers.o
+                    0x0888                  frequency1
+                    0x088c                  frequency2
 
-.ndata              0x087e          0x8
- .ndata             0x087e          0x8 tmp\uart.o
-                    0x087e                  wbufptr
-                    0x0880                  rbufptr
-                    0x0882                  bufstt
-                    0x0884                  cmdissued
+.ndata              0x0890          0x6
+ .ndata             0x0890          0x6 tmp\motor_pid.o
+                    0x0890                  kCoeffs
 
-.nbss               0x0886          0x8
- .nbss              0x0886          0x8 tmp\steppers.o
-                    0x0886                  frequency1
-                    0x088a                  frequency2
+.data               0x0896         0xa0
+ .data              0x0896         0xa0 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo)
 
-.ndata              0x088e          0x6
- .ndata             0x088e          0x6 tmp\motor_pid.o
-                    0x088e                  kCoeffs
+.dconst             0x0936         0x2a
+ .dconst            0x0936         0x2a c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(doprnt_cdnopuxX.XXo)
 
-.const              0x83b0         0x44 load address 0x0003b0  
- .const             0x83b0         0x2c tmp\uart.o
- .const             0x83dc         0x18 tmp\steppers.o
-                    0x83dc                  step_full1
-                    0x83e0                  step_half1
-                    0x83e8                  step_full2
-                    0x83ec                  step_half2
+.data               0x0960         0x26
+ .data              0x0960         0x26 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(_iob.XXo)
+                    0x0960                  _Files
+                    0x0962                  _iob
 
-.text             0x0003f4        0xb26
- .text            0x0003f4        0x680 tmp\uart.o
-                  0x0003f4                  _U1RXInterrupt
-                  0x00043a                  loopback_UART
-                  0x0004ca                  ato88
-                  0x0005ec                  process_cmd
-                  0x000a5c                  Init_UART
- .text            0x000a74        0x3e6 tmp\steppers.o
-                  0x000a74                  _T1Interrupt
-                  0x000a98                  _T2Interrupt
-                  0x000ab6                  Init_Steppers
-                  0x000adc                  rotate_stepper1
-                  0x000be8                  rotate_stepper2
-                  0x000cf4                  step_stepper1
-                  0x000d9a                  step_stepper2
-                  0x000e40                  disable_stepper1
-                  0x000e4e                  disable_stepper2
- .text            0x000e5a         0xc0 tmp\motor_pid.o
-                  0x000e5a                  _ADCInterrupt
-                  0x000e88                  Motor_PID_Init
+.bss                0x0986          0x6
+ .bss               0x0986          0x6 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libc-coff.a(_iob.XXo)
+                    0x0986                  _sobuf
+                    0x0988                  _sibuf
+                    0x098a                  _outdone
 
-.dinit            0x000f1a         0x44
- .dinit           0x000f1a         0x44 data_init
+.data               0x098c          0x2
+ .data              0x098c          0x2 c:/program files (x86)/microchip/mplabc30/v3.31/bin/bin/../../lib\libpic30-coff.a(c30_uart.o)
+                    0x098c                  __C30_UART
 
-.text             0x000f5e         0x32
- .text            0x000f5e         0x1c c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-coff.a(delay32.o)
-                  0x000f5e                  __delay32
- .text            0x000f7a         0x16 tmp\main.o
-                  0x000f7a                  main
-                  0x000f84                  InitDevice
+.const              0x8d40         0x90 load address 0x000d40  
+ .const             0x8d40         0x78 tmp\uart.o
+ .const             0x8db8         0x18 tmp\steppers.o
+                    0x8db8                  step_full1
+                    0x8dbc                  step_half1
+                    0x8dc4                  step_full2
+                    0x8dc8                  step_half2
 
-.isr              0x000f90          0x2
- .isr             0x000f90          0x2 default_isr
-                  0x000f90                  _DefaultInterrupt
+.text             0x000dd0        0x8ca
+ .text            0x000dd0        0x4fa tmp\uart.o
+                  0x000dd0                  _U1RXInterrupt
+                  0x000e16                  loopback_UART
+                  0x000ee4                  ato88
+                  0x001006                  process_cmd
+                  0x00128e                  echo_UART
+                  0x0012b2                  Init_UART
+ .text            0x0012ca        0x3d0 tmp\steppers.o
+                  0x0012ca                  _T1Interrupt
+                  0x0012ee                  _T2Interrupt
+                  0x00130c                  Init_Steppers
+                  0x001334                  rotate_stepper1
+                  0x001438                  rotate_stepper2
+                  0x00153c                  step_stepper1
+                  0x0015de                  step_stepper2
+                  0x00167c                  disable_stepper1
+                  0x00168c                  disable_stepper2
+
+.dinit            0x00169a        0x108
+ .dinit           0x00169a        0x108 data_init
+
+.text             0x0017a2         0xe8
+ .text            0x0017a2         0xd0 tmp\motor_pid.o
+                  0x0017a2                  _ADCInterrupt
+                  0x0017d0                  Motor_PID_Init
+ .text            0x001872         0x18 tmp\main.o
+                  0x001872                  main
+                  0x00187e                  InitDevice
