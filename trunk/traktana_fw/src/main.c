@@ -28,6 +28,7 @@ void InitDevice();
 int  Init_UART(void);
 void loopback_UART(void);
 void process_cmd(void);
+void echo_UART(void);
 void Init_Steppers();
 void Motor_PID_Init (void);
 //---------------------------------------------------------------------------
@@ -39,6 +40,7 @@ int main(void)
     {
 		loopback_UART();
 		process_cmd();
+		echo_UART();
     }
 }
 //--------------------------------------------------------------------------------------------------------------
