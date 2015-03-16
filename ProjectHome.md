@@ -1,0 +1,1 @@
+Software desenvolvido em linguagem C++ utilizando biblioteca grafica Qt4, para controle de equipamento de confecção de planos de fios atraves da USB.
